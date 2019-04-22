@@ -35,3 +35,8 @@ window.addEventListener('load', function () {
         }
     }
 }, false)
+
+
+$('.carousel').carousel({
+    interval: 5000
+})
