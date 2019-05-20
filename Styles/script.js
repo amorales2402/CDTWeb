@@ -1,5 +1,5 @@
 $(function () {
-    $("#includedMenu").load("../Pages/menu.html");
+    $("#includedMenu").load("Pages/menu.html");
 });
 
 (function ($) {
