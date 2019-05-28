@@ -213,6 +213,13 @@ p {
     min-height: 100%;
 }
 
+.lazy-4 {
+    background-image: url("../images/all_bg.png");
+    min-height: 100%;
+}
+
+
+
 .lazy-3 div {
     white-space: nowrap
 }
@@ -252,6 +259,18 @@ p {
     -o-background-size: cover;
 }
 
+#clients,
+#own-services,
+#partners,
+#contact {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+}
 
 h2,
 h1,
