@@ -7,15 +7,15 @@
     src: url('../fonts/titillium-web-v7-latin-regular.eot');
     /* IE9 Compat Modes */
     src: local('Titillium Web Regular'), local('TitilliumWeb-Regular'),
-        url('../fonts/titillium-web-v7-latin-regular.eot?#iefix') format('embedded-opentype'),
-        /* IE6-IE8 */
-        url('../fonts/titillium-web-v7-latin-regular.woff2') format('woff2'),
-        /* Super Modern Browsers */
-        url('../fonts/titillium-web-v7-latin-regular.woff') format('woff'),
-        /* Modern Browsers */
-        url('../fonts/titillium-web-v7-latin-regular.ttf') format('truetype'),
-        /* Safari, Android, iOS */
-        url('../fonts/titillium-web-v7-latin-regular.svg#TitilliumWeb') format('svg');
+    url('../fonts/titillium-web-v7-latin-regular.eot?#iefix') format('embedded-opentype'),
+    /* IE6-IE8 */
+    url('../fonts/titillium-web-v7-latin-regular.woff2') format('woff2'),
+    /* Super Modern Browsers */
+    url('../fonts/titillium-web-v7-latin-regular.woff') format('woff'),
+    /* Modern Browsers */
+    url('../fonts/titillium-web-v7-latin-regular.ttf') format('truetype'),
+    /* Safari, Android, iOS */
+    url('../fonts/titillium-web-v7-latin-regular.svg#TitilliumWeb') format('svg');
     /* Legacy iOS */
 }
 
@@ -30,7 +30,16 @@ html {
     font-family: Titillium Web, Roboto, AppleGothic, sans-serif;
     height: 100%;
     scroll-behavior: smooth;
-    background: #fefefe;
+
+    background: rgba(255, 255, 255, 1);
+    background: -moz-linear-gradient(left, rgba(255, 255, 255, 1) 0%, rgba(164, 205, 233, 1) 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(255, 255, 255, 1)), color-stop(100%, rgba(164, 205, 233, 1)));
+    background: -webkit-linear-gradient(left, rgba(255, 255, 255, 1) 0%, rgba(164, 205, 233, 1) 100%);
+    background: -o-linear-gradient(left, rgba(255, 255, 255, 1) 0%, rgba(164, 205, 233, 1) 100%);
+    background: -ms-linear-gradient(left, rgba(255, 255, 255, 1) 0%, rgba(164, 205, 233, 1) 100%);
+    background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(164, 205, 233, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#a4cde9', GradientType=1);
+
 }
 
 
@@ -51,6 +60,12 @@ p {
 .container-fluid {
     padding: 0px;
 }
+
+.bg_dark {
+    background-color: #2d2d2d;
+}
+
+
 
 .dropdown-menu {
     background: none;
@@ -189,7 +204,7 @@ p {
 
 #suite,
 #contact {
-    background-color: #a4cde9
+    background-color: transparent;
 }
 
 
