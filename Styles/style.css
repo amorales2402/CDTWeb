@@ -215,7 +215,7 @@ p {
 
 .lazy-4 {
     background-image: url("../images/all_bg.png");
-    min-height: 100%;
+
 }
 
 
@@ -270,6 +270,10 @@ p {
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
+}
+
+#contact iframe {
+    width: 100%;
 }
 
 h2,
