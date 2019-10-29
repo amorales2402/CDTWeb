@@ -1,6 +1,14 @@
 $(function () {
-    $("#includedMenu").load("Pages/menu.html");
+    $("#includedMenu").load("../Pages/menu.html");
+    $("#includedMenu-EN").load("../Pages/menu-EN.html");
+    $("#includedMenuBI").load("../Pages/menuBI.html");
+    $("#includedMenuBI-EN").load("../Pages/menuBI-EN.html");
+    $("#includedMenuPOS").load("../Pages/menuPOS.html");
+    $("#includedMenuPOS-EN").load("../Pages/menuPOS-EN.html");
+    $("#includedMenuGIS").load("../Pages/menuGIS.html");
+    $("#includedMenuGIS-EN").load("../Pages/menuGIS-EN.html");
 });
+
 
 (function ($) {
     $(window).scroll(function () {

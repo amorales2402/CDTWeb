@@ -32,16 +32,17 @@ html {
     scroll-behavior: smooth;
 
     background: rgba(255, 255, 255, 1);
-    background: -moz-linear-gradient(left, rgba(255, 255, 255, 1) 0%, rgba(164, 205, 233, 1) 100%);
+    /*background: -moz-linear-gradient(left, rgba(255, 255, 255, 1) 0%, rgba(164, 205, 233, 1) 100%);
     background: -webkit-gradient(left top, right top, color-stop(0%, rgba(255, 255, 255, 1)), color-stop(100%, rgba(164, 205, 233, 1)));
     background: -webkit-linear-gradient(left, rgba(255, 255, 255, 1) 0%, rgba(164, 205, 233, 1) 100%);
     background: -o-linear-gradient(left, rgba(255, 255, 255, 1) 0%, rgba(164, 205, 233, 1) 100%);
     background: -ms-linear-gradient(left, rgba(255, 255, 255, 1) 0%, rgba(164, 205, 233, 1) 100%);
     background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(164, 205, 233, 1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#a4cde9', GradientType=1);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#a4cde9', GradientType=1);*/
 
 }
 
+.w-40 {width:40%}
 
 h1,
 h2,
@@ -68,7 +69,7 @@ p {
 
 
 .dropdown-menu {
-    background: none;
+    background: #fff;
     border-width: none;
     border-style: none;
     border-color: none;
@@ -86,12 +87,25 @@ p {
     -webkit-transition: background 3s ease-in-out, padding 3s ease-in-out, height 3s ease-in-out, color 3s ease-in-out, font-size 3s ease-in-out;
     -moz-transition: background 3s ease-in-out, padding 3s ease-in-out, height 3s ease-in-out, color 3s ease-in-out, font-size 3s ease-in-out;
     transition: background 3s ease-in-out, padding 3s ease-in-out, height 3s ease-in-out, color 3s ease-in-out, font-size 3s ease-in-out;
-    border-bottom: 1px solid #a4cde9;
 }
 
+.navbar-light svg {
+    width:40px;
+    -webkit-transition: height 3s ease-in-out, padding 3s ease-in-out, width 3s ease-in-out, padding 3s ease-in-out;
+    -moz-transition: height 3s ease-in-out, padding 3s ease-in-out, width 3s ease-in-out, padding 3s ease-in-out;
+    transition: height 3s ease-in-out, padding 3s ease-in-out, width 3s ease-in-out, padding 3s ease-in-out;
+}
+.navbar-top-fade svg {
+    width:30px;
+    -webkit-transition: height 3s ease-in-out, padding 3s ease-in-out, width 3s ease-in-out, padding 3s ease-in-out;
+    -moz-transition: height 3s ease-in-out, padding 3s ease-in-out, width 3s ease-in-out, padding 3s ease-in-out;
+    transition: height 3s ease-in-out, padding 3s ease-in-out, width 3s ease-in-out, padding 3s ease-in-out;
+}
+
+.collapse ul{background: #fff;}
 
 .navbar-light .navbar-nav .nav-link {
-    color: #a4cde9;
+    color: #4d4d4d;
     -webkit-transition: background 3s ease-in-out, padding 3s ease-in-out, height 3s ease-in-out, color 3s ease-in-out, font-size 3s ease-in-out;
     -moz-transition: background 3s ease-in-out, padding 3s ease-in-out, height 3s ease-in-out, color 3s ease-in-out, font-size 3s ease-in-out;
     transition: background 3s ease-in-out, padding 3s ease-in-out, height 3s ease-in-out, color 3s ease-in-out, font-size 3s ease-in-out;
@@ -110,7 +124,8 @@ p {
 .navbar-light .navbar-nav .nav-link.active,
 .navbar-light .navbar-nav .nav-link.open,
 .navbar-light .navbar-nav .open > .nav-link {
-    color: #213659;
+    border-bottom: 2px solid black;
+    border-radius: 0px !important;
 }
 
 .nav-pills .nav-item.show .nav-link,
@@ -120,11 +135,9 @@ p {
 }
 
 .nav-item a:hover {
-    color: #213659 !important;
+    border-bottom: 2px solid black;
     background: none;
-    -webkit-transition: color 1s linear !important;
-    -moz-transition: color 1s linear !important;
-    transition: color 1s linear !important;
+    border-radius: 0px !important;
 }
 
 .nav-item a:visited {
@@ -212,6 +225,22 @@ p {
     background-image: url("../images/image_bg1.jpg");
     min-height: 100%;
 }
+.lazy-bi1 {
+    background-image: url("../images/bi-bg1.jpg");
+    min-height: 100%;
+}
+
+.lazy-pos1 {
+    background-image: url("../images/pos-bg1.jpg");
+    min-height: 100%;
+}
+
+.lazy-gis1 {
+    background-image: url("../images/gis-bg1.jpg");
+    min-height: 100%;
+}
+
+
 
 .lazy-4 {
     background-image: url("../images/all_bg.png");
@@ -236,9 +265,10 @@ p {
 }
 
 .lazy-3,
-#about,
-
-#services {
+#services,
+#bi-start,
+#pos-start,
+#gis-start {
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -272,23 +302,32 @@ p {
     -o-background-size: cover;
 }
 
+#clients,#partners {background-color:#f6fbfd}
+#contact-bottom {background-color:#595959   ;
+    color:#c1c1c1;}
+#contact-bottom a {;
+        color:#c1c1c1;}
+#contact-bottom a:hover{
+        color:#fff;}
+
 #contact iframe {
     width: 100%;
 }
+
+.light_blue {background-color:#f6fbfd}
 
 h2,
 h1,
 h3,
 h4 {
-    color: #385a9b;
+    color: #1b5da9;
 }
-
-
-
 .gray {
     color: #211915;
 }
 
+.pos_icons h5 {color:#8acdea;}
+.pos_icons svg {fill:#8acdea    ;}
 
 .border_categorize {
     border: 1px solid #211915;
@@ -327,6 +366,8 @@ h4 {
 .carousel-item-prev {
     display: block;
 }
+
+.separator-own,.separator-own:hover,.separator-own.active {border:none !important;}
 
 @media (max-width: 768px) {
     .lazy-3 {
