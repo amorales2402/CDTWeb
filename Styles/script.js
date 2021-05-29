@@ -1,4 +1,4 @@
-$(function () {
+$(function() {
     $("#includedMenu").load("../Pages/menu.html");
     $("#includedMenu-EN").load("../Pages/menu-EN.html");
     $("#includedMenuBI").load("../Pages/menuBI.html");
@@ -10,8 +10,8 @@ $(function () {
 });
 
 
-(function ($) {
-    $(window).scroll(function () {
+(function($) {
+    $(window).scroll(function() {
         var scroll = $(window).scrollTop();
 
         if (scroll >= 500) {
@@ -35,7 +35,7 @@ $(function () {
 
 
 
-window.addEventListener('load', function () {
+window.addEventListener('load', function() {
     var allimages = document.getElementsByTagName('img');
     for (var i = 0; i < allimages.length; i++) {
         if (allimages[i].getAttribute('data-src')) {

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--DECLARA FAVICONS-->
+    <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
+    <link rel="mask-icon" href="../images/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <TITLE>CDT Big Data & Business Intelligence</TITLE>
+    <meta NAME="AUTHOR" CONTENT="Allen Morales">
+    <meta NAME="REPLY-TO" CONTENT="amorales@cdt.cr">
+    <link REV="made" href="mailto:amorales@cdt.cr">
+    <meta NAME="DESCRIPTION" CONTENT="Business Intligence">
+    <meta NAME="KEYWORDS" CONTENT="BI, Business Inteligence, Geolocalizacion">
+    <meta NAME="Resource-type" CONTENT="Homepage">
+    <meta NAME="DateCreated" CONTENT="Wed, 26 February 2019 00:00:00 GMT+1">
+    <meta NAME="Revisit-after" CONTENT="10 days">
+    <meta NAME="robots" content="ALL">
+    <meta charset="UTF-8">
+
+    <?php
+    header('Cache-Control: max-age=84600');
+    ?>
+        <link rel="manifest" href="../Styles/manifest.js">
+
+        <meta name="theme-color" content="#76aadb">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="application-name" content="CDT">
+        <meta name="apple-mobile-web-app-title" content="CDT">
+        <meta name="msapplication-starturl" content="cdt.cr">
+
+        <!--CSS BOOTSTRAP
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous" media="none" onload="if(media!='all')media='all'">-->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <link rel="stylesheet" href="../Styles/style.css" media="none" onload="if(media!='all')media='all'">
+
+        <meta name=viewport content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" type="image/x-icon" href="../images/favicon.ico">
+</head>
+
+<body onload="getInfo()">
+
+    <section class=" section h-100 ">
+        <div class="container-fluid ">
+            <div class="row flex-fill align-items-center justify-content-center h-100 ">
+                <div class="col-12 col-xl-9 col-md-9 col-sm-12">
+                    <div class="row align-items-center justify-content-center ">
+                        <div class="col-12 col-xl-8 col-md-12 pb-2 ">
+                            <div class="row align-items-center justify-content-center ">
+                                <div class="col-6 col-xl-4 col-md-4 col-sm-6 pr-5 ">
+                                    <img class="w-100 " src="../images/userblack_icon.jpg " alt=" ">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row align-items-center justify-content-center pb-5 ">
+                        <div class="col-12 col-xl-8 col-md-8 col-sm-8 pt-2 ">
+                            <div class="row justify-content-center ">
+                                <div class="col-12 pt-4 ">
+                                    <div class="row justify-content-center ">
+                                        <h1 id="nombre"></h1>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row justify-content-center align-items-center">
+                                <div class="col-6 ">
+                                    <div class="row justify-content-end ">
+                                        <p class="m-0 p-0 " id="celular">C:</p>
+                                    </div>
+                                    <div class="row justify-content-end ">
+                                        <p class="m-0 p-0 " id="mail"></p>
+                                    </div>
+                                    <div class="row justify-content-end ">
+                                        <p class="m-0 p-0 " id="direccion">Heredia, Costa Rica</p>
+                                    </div>
+                                </div>
+                                <div class="col-5 ">
+                                    <div class="row justify-content-center align-items-center">
+                                        <div class="row justify-content-start m-0 ">
+                                            <div id="faceblock" class="col-2 col-xl-2 col-md-3 col-sm-4 m-0 p-1 ">
+                                                <a id="facebook" target="_blank " rel="noopener " aria-label="Facebook "><img class="w-100 " src="../images/faceblack_icon.jpg " alt=" "></a>
+                                            </div>
+                                            <div id="linkedlock" class="col-2 col-xl-2 col-md-3 col-sm-4 m-0 p-1 ">
+                                                <a id="linkedin" target="_blank " rel="noopener " aria-label="LinkedIn "><img class="w-100 " src="../images/linkblack_icon.jpg " alt=" "></a>
+                                            </div>
+                                            <div id="instablock" class="col-2 col-xl-2 col-md-3 col-sm-4 m-0 p-1 ">
+                                                <a id="instagram" target="_blank " rel="noopener " aria-label="LinkedIn "><img class="w-100 " src="../images/instablack_icon.png " alt=" "></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row flex-fill align-items-center justify-content-center h-100 pt-2 ">
+                        <div class="col-12 ">
+                            <div class="row align-items-center justify-content-center ">
+                                <div class="col-12 ">
+                                    <div class="row align-items-center justify-content-center ">
+                                        <button class="btn btn-light" onclick="saveContact()">Guardar Contacto</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row flex-fill align-items-center justify-content-center h-100 pt-5 ">
+                        <div class="col-11 col-xl-6 col-md-10 col-sm-11">
+                            <div class="row align-items-center justify-content-center ">
+                                <div class="col-4">
+                                    <div class="row align-items-center justify-content-start ">
+                                        <div class="col-12 col-sm-10 col-md-12 col-xl-12">
+                                            <img class="w-100 " src="../images/logo.png " alt=" ">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6 pl-5 border-left border-right ">
+                                    <div class="row justify-content-start ">
+                                        <p class="m-0 p-0 ">T: 2221-4244</p>
+                                    </div>
+                                    <div class="row justify-content-start ">
+                                        <p class="m-0 p-0 ">E: info@cdtbigdata.com</p>
+                                    </div>
+                                    <div class="row justify-content-start ">
+                                        <p class="m-0 p-0 ">San José, Costa Rica</p>
+                                    </div>
+                                </div>
+                                <div class="col-2 ">
+                                    <div class="row justify-content-center ">
+                                        <div class="col-6 m-0 p-1 ">
+                                            <a href="https://www.facebook.com/cdtcr/ " target="_blank " rel="noopener " aria-label="Facebook "><img class="w-100 " src="../images/faceblack_icon.jpg " alt=" "></a>
+                                        </div>
+                                        <div class="col-6 m-0 p-1 ">
+                                            <a href="https://www.linkedin.com/company/cdtbigdata " target="_blank " rel="noopener " aria-label="LinkedIn "><img class="w-100 " src="../images/linkblack_icon.jpg " alt=" "></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row flex-fill align-items-center justify-content-center h-100 pt-2 ">
+                        <div class="col-12 ">
+                            <div class="row align-items-center justify-content-center ">
+                                <div class="col-12 ">
+                                    <div class="row align-items-center justify-content-center ">
+                                        <a href="/ ">www.cdtbigdata.com</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    </section>
+
+    <script src="../Styles/vCard.js"></script>
+    <script src="../Styles/contactscript.js"></script>
+
+
+
+</body>
+
+</html>
