@@ -28,25 +28,27 @@
     <?php
     header('Cache-Control: max-age=84600');
     ?>
-        <link rel="manifest" href="/Styles/manifest.js">
+    <link rel="manifest" href="/Styles/manifest.js">
 
-        <meta name="theme-color" content="#76aadb">
-        <meta name="mobile-web-app-capable" content="yes">
-        <meta name="apple-mobile-web-app-capable" content="yes">
-        <meta name="application-name" content="CDT">
-        <meta name="apple-mobile-web-app-title" content="CDT">
-        <meta name="msapplication-starturl" content="cdt.cr">
+    <meta name="theme-color" content="#76aadb">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="CDT">
+    <meta name="apple-mobile-web-app-title" content="CDT">
+    <meta name="msapplication-starturl" content="cdt.cr">
 
-        <!--CSS BOOTSTRAP
+    <!--CSS BOOTSTRAP
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous" media="none" onload="if(media!='all')media='all'">-->
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-        <link rel="stylesheet" href="Styles/style.css" media="none" onload="if(media!='all')media='all'">
-        <meta name=viewport content="width=device-width, initial-scale=1">
-        <link rel="shortcut icon" type="image/x-icon" href="./images/favicon.ico">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="Styles/style.css" media="none" onload="if(media!='all')media='all'">
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/x-icon" href="./images/favicon.ico">
 
 </head>
 
-<body data-spy="scroll" data-target="#navbar-menu-scroll" data-offset="0">
+<body data-spy="scroll" id="hover-scroll" onmousemove="hidescrollbar()" data-target="#navbar-menu-scroll"
+    data-offset="0">
     <header class="navbar navbar-expand navbar-light flex-column flex-md-row bd-navbar">
         <!--<a class="navbar-brand" href="/" aria-label="CDT Big Data & Business Intelligence">
             <span class="navbar-toggler-icon"></span>
@@ -76,44 +78,57 @@
         </div>
         <ul class="navbar-nav ml-md-auto">
             <li class="nav-item dropdown">
-                <a class="nav-item nav-link dropdown-toggle mr-md-2" href="/" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Language</a>
+                <a class="nav-item nav-link dropdown-toggle mr-md-2" href="/" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">Language</a>
                 <div class="dropdown-menu dropdown-menu-md-right">
                     <a class="dropdown-item active" href="./index.html#start">Español</a>
                     <div class="dropdown-divider"></div>
                     <a class="dropdown-item" href="./index-EN.html#start">English</a>
 
                 </div>
-                <li class="nav-item">
-                    <a class="nav-link p-1 m-0" href="https://www.facebook.com/cdtcr/" target="_blank" rel="noopener" aria-label="Twitter">
-                        <svg id="Capa_1" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 99.87 99.83">
+            <li class="nav-item">
+                <a class="nav-link p-1 m-0" href="https://www.facebook.com/cdtcr/" target="_blank" rel="noopener"
+                    aria-label="Twitter">
+                    <svg id="Capa_1" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 99.87 99.83">
                         <title>Facebook</title>
-                        <path fill="currentColor" d="M49.91,100a49.92,49.92,0,1,1,50-51A49.84,49.84,0,0,1,49.91,100Zm4.84-49.58c2.41,0,4.65,0,6.89,0,.86,0,1.27-.27,1.34-1.19.22-2.81.51-5.61.8-8.4.1-.87-.23-1.2-1.09-1.19-2.25,0-4.49,0-6.74,0-1,0-1.4-.22-1.35-1.24.08-1.53,0-3.08.12-4.61a2.8,2.8,0,0,1,2.87-3,46.7,46.7,0,0,1,4.88-.09c1.08,0,1.59-.25,1.55-1.47-.09-2.51-.07-5,0-7.53,0-1.17-.4-1.57-1.53-1.53-3.17.11-6.34.13-9.51.23A10.75,10.75,0,0,0,42.2,30.49C42,33.11,42,35.76,42,38.4c0,1-.17,1.47-1.31,1.37s-2.46,0-3.7,0c-.85,0-1.15.32-1.14,1.18,0,2.73,0,5.46,0,8.19,0,1,.44,1.31,1.34,1.29a30.2,30.2,0,0,0,3.16,0c1.35-.18,1.64.34,1.63,1.59,0,8.9,0,17.79,0,26.69,0,1.25.36,1.73,1.66,1.7,3.21-.07,6.43,0,9.64,0,1.15,0,1.57-.41,1.55-1.55-.05-2.82,0-5.64,0-8.46Z" transform="translate(0 -0.17)" />
+                        <path fill="currentColor"
+                            d="M49.91,100a49.92,49.92,0,1,1,50-51A49.84,49.84,0,0,1,49.91,100Zm4.84-49.58c2.41,0,4.65,0,6.89,0,.86,0,1.27-.27,1.34-1.19.22-2.81.51-5.61.8-8.4.1-.87-.23-1.2-1.09-1.19-2.25,0-4.49,0-6.74,0-1,0-1.4-.22-1.35-1.24.08-1.53,0-3.08.12-4.61a2.8,2.8,0,0,1,2.87-3,46.7,46.7,0,0,1,4.88-.09c1.08,0,1.59-.25,1.55-1.47-.09-2.51-.07-5,0-7.53,0-1.17-.4-1.57-1.53-1.53-3.17.11-6.34.13-9.51.23A10.75,10.75,0,0,0,42.2,30.49C42,33.11,42,35.76,42,38.4c0,1-.17,1.47-1.31,1.37s-2.46,0-3.7,0c-.85,0-1.15.32-1.14,1.18,0,2.73,0,5.46,0,8.19,0,1,.44,1.31,1.34,1.29a30.2,30.2,0,0,0,3.16,0c1.35-.18,1.64.34,1.63,1.59,0,8.9,0,17.79,0,26.69,0,1.25.36,1.73,1.66,1.7,3.21-.07,6.43,0,9.64,0,1.15,0,1.57-.41,1.55-1.55-.05-2.82,0-5.64,0-8.46Z"
+                            transform="translate(0 -0.17)" />
                     </svg>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link p-1 m-0" href="https://www.linkedin.com/company/cdtbigdata" target="_blank" rel="noopener" aria-label="Twitter">
-                        <svg id="Capa_1" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 99.56 99.56">
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link p-1 m-0" href="https://www.linkedin.com/company/cdtbigdata" target="_blank"
+                    rel="noopener" aria-label="Twitter">
+                    <svg id="Capa_1" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 99.56 99.56">
                         <defs>
                             <style>
                                 .cls-1 {
                                     fill: #fff;
                                 }
-
                             </style>
                         </defs>
                         <title>LinkedIn</title>
-                        <path fill="currentColor" d="M49.62,100A49.78,49.78,0,1,1,100.15,50.7,49.71,49.71,0,0,1,49.62,100ZM73.46,50.22c0-6.49-.06-13,0-19.47a3.65,3.65,0,0,0-3.68-3.68q-19.44,0-38.87,0a4.2,4.2,0,0,0-.87.07,3.53,3.53,0,0,0-2.86,3.77V69.49c0,.12,0,.25,0,.37a3.47,3.47,0,0,0,3.49,3.49H70a3.53,3.53,0,0,0,3.47-3.49C73.42,63.32,73.46,56.77,73.46,50.22Z" transform="translate(-0.59 -0.44)" />
-                        <path fill="currentColor" class="cls-1" d="M52,47.49l-.21,0c0-.74,0-1.48,0-2.21,0-.54-.14-.73-.7-.72-1.66,0-3.33,0-5,0-.56,0-.71.18-.7.72q0,10.2,0,20.4c0,.56.14.77.73.76,1.72,0,3.45,0,5.18,0,.56,0,.75-.14.74-.74,0-3.57,0-7.15,0-10.73a9.66,9.66,0,0,1,.5-2.86c.53-1.56,2-2.34,3.91-2.25a3.07,3.07,0,0,1,3.1,2.57,10.26,10.26,0,0,1,.28,2.34c0,3.64,0,7.28,0,10.92,0,.57.16.76.73.75,1.73,0,3.46,0,5.18,0,.62,0,.76-.21.76-.79,0-3.79,0-7.57,0-11.36a27.32,27.32,0,0,0-.38-4.33,6.44,6.44,0,0,0-3.79-5.21,9.5,9.5,0,0,0-4.65-.66,7,7,0,0,0-5.39,3.07C52.18,47.25,52.07,47.37,52,47.49ZM34.26,55.4c0,3.45,0,6.9,0,10.35,0,.5.15.65.64.64,1.81,0,3.62,0,5.43,0,.46,0,.6-.16.6-.61q0-10.33,0-20.65c0-.47-.15-.61-.61-.61-1.79,0-3.58,0-5.36,0-.56,0-.71.17-.7.71C34.27,48.62,34.26,52,34.26,55.4Zm7.16-17.88a3.84,3.84,0,1,0-3.84,3.81A3.81,3.81,0,0,0,41.42,37.52Z" transform="translate(-0.59 -0.44)" />
-                        <path fill="currentColor" d="M52,47.49c.1-.12.21-.24.3-.37a7,7,0,0,1,5.39-3.07,9.5,9.5,0,0,1,4.65.66,6.44,6.44,0,0,1,3.79,5.21,27.32,27.32,0,0,1,.38,4.33c0,3.79,0,7.57,0,11.36,0,.58-.14.8-.76.79-1.72,0-3.45,0-5.18,0-.57,0-.73-.18-.73-.75,0-3.64,0-7.28,0-10.92a10.26,10.26,0,0,0-.28-2.34,3.07,3.07,0,0,0-3.1-2.57c-1.92-.09-3.38.69-3.91,2.25a9.66,9.66,0,0,0-.5,2.86c-.06,3.58,0,7.16,0,10.73,0,.6-.18.75-.74.74-1.73,0-3.46,0-5.18,0-.59,0-.74-.2-.73-.76q0-10.2,0-20.4c0-.54.14-.73.7-.72,1.66,0,3.33,0,5,0,.56,0,.73.18.7.72,0,.73,0,1.47,0,2.21Z" transform="translate(-0.59 -0.44)" />
-                        <path fill="currentColor" d="M34.26,55.4c0-3.39,0-6.78,0-10.17,0-.54.14-.72.7-.71,1.78,0,3.57,0,5.36,0,.46,0,.61.14.61.61q0,10.32,0,20.65c0,.45-.14.62-.6.61-1.81,0-3.62,0-5.43,0-.49,0-.64-.14-.64-.64C34.27,62.3,34.26,58.85,34.26,55.4Z" transform="translate(-0.59 -0.44)" />
-                        <path fill="currentColor" d="M41.42,37.52a3.84,3.84,0,1,1-3.8-3.87A3.78,3.78,0,0,1,41.42,37.52Z" transform="translate(-0.59 -0.44)" />
+                        <path fill="currentColor"
+                            d="M49.62,100A49.78,49.78,0,1,1,100.15,50.7,49.71,49.71,0,0,1,49.62,100ZM73.46,50.22c0-6.49-.06-13,0-19.47a3.65,3.65,0,0,0-3.68-3.68q-19.44,0-38.87,0a4.2,4.2,0,0,0-.87.07,3.53,3.53,0,0,0-2.86,3.77V69.49c0,.12,0,.25,0,.37a3.47,3.47,0,0,0,3.49,3.49H70a3.53,3.53,0,0,0,3.47-3.49C73.42,63.32,73.46,56.77,73.46,50.22Z"
+                            transform="translate(-0.59 -0.44)" />
+                        <path fill="currentColor" class="cls-1"
+                            d="M52,47.49l-.21,0c0-.74,0-1.48,0-2.21,0-.54-.14-.73-.7-.72-1.66,0-3.33,0-5,0-.56,0-.71.18-.7.72q0,10.2,0,20.4c0,.56.14.77.73.76,1.72,0,3.45,0,5.18,0,.56,0,.75-.14.74-.74,0-3.57,0-7.15,0-10.73a9.66,9.66,0,0,1,.5-2.86c.53-1.56,2-2.34,3.91-2.25a3.07,3.07,0,0,1,3.1,2.57,10.26,10.26,0,0,1,.28,2.34c0,3.64,0,7.28,0,10.92,0,.57.16.76.73.75,1.73,0,3.46,0,5.18,0,.62,0,.76-.21.76-.79,0-3.79,0-7.57,0-11.36a27.32,27.32,0,0,0-.38-4.33,6.44,6.44,0,0,0-3.79-5.21,9.5,9.5,0,0,0-4.65-.66,7,7,0,0,0-5.39,3.07C52.18,47.25,52.07,47.37,52,47.49ZM34.26,55.4c0,3.45,0,6.9,0,10.35,0,.5.15.65.64.64,1.81,0,3.62,0,5.43,0,.46,0,.6-.16.6-.61q0-10.33,0-20.65c0-.47-.15-.61-.61-.61-1.79,0-3.58,0-5.36,0-.56,0-.71.17-.7.71C34.27,48.62,34.26,52,34.26,55.4Zm7.16-17.88a3.84,3.84,0,1,0-3.84,3.81A3.81,3.81,0,0,0,41.42,37.52Z"
+                            transform="translate(-0.59 -0.44)" />
+                        <path fill="currentColor"
+                            d="M52,47.49c.1-.12.21-.24.3-.37a7,7,0,0,1,5.39-3.07,9.5,9.5,0,0,1,4.65.66,6.44,6.44,0,0,1,3.79,5.21,27.32,27.32,0,0,1,.38,4.33c0,3.79,0,7.57,0,11.36,0,.58-.14.8-.76.79-1.72,0-3.45,0-5.18,0-.57,0-.73-.18-.73-.75,0-3.64,0-7.28,0-10.92a10.26,10.26,0,0,0-.28-2.34,3.07,3.07,0,0,0-3.1-2.57c-1.92-.09-3.38.69-3.91,2.25a9.66,9.66,0,0,0-.5,2.86c-.06,3.58,0,7.16,0,10.73,0,.6-.18.75-.74.74-1.73,0-3.46,0-5.18,0-.59,0-.74-.2-.73-.76q0-10.2,0-20.4c0-.54.14-.73.7-.72,1.66,0,3.33,0,5,0,.56,0,.73.18.7.72,0,.73,0,1.47,0,2.21Z"
+                            transform="translate(-0.59 -0.44)" />
+                        <path fill="currentColor"
+                            d="M34.26,55.4c0-3.39,0-6.78,0-10.17,0-.54.14-.72.7-.71,1.78,0,3.57,0,5.36,0,.46,0,.61.14.61.61q0,10.32,0,20.65c0,.45-.14.62-.6.61-1.81,0-3.62,0-5.43,0-.49,0-.64-.14-.64-.64C34.27,62.3,34.26,58.85,34.26,55.4Z"
+                            transform="translate(-0.59 -0.44)" />
+                        <path fill="currentColor" d="M41.42,37.52a3.84,3.84,0,1,1-3.8-3.87A3.78,3.78,0,0,1,41.42,37.52Z"
+                            transform="translate(-0.59 -0.44)" />
                     </svg>
-                    </a>
-                </li>
+                </a>
+            </li>
         </ul>
     </header>
-    <section id="start-bg" class="lazy-3 mx-4">
+    <section id="start-bg" class="lazy-3">
         <div class="container-fluid">
             <div class="row justify-content-center">
                 <div class="col-10 col-xs-10 col-sm-10 col-md-4">
@@ -124,28 +139,32 @@
     </section>
     <section id="about" class="py-5">
         <div class="row justify-content-center">
-            <div class="col-10 col-xs-10 col-sm-10 col-md-10">
+            <div class="col-12 col-xs-10 col-sm-10 col-md-10">
 
-                <div class="row align-items-center">
-                    <div class=" col-12 col-xs-12 col-sm-12 col-md-5">
+                <div class="row align-items-center justify-content-center">
+                    <div class=" col-8 col-xs-8 col-sm-8 col-md-5">
                         <img class="w-100" src="./images/wait.gif" data-src="./images/about_img.png" alt="">
                     </div>
-                    <div class="col-12 col-xs-12 col-sm-12 col-md-6">
-                        <div class="row">
-                            <div class="col-12 col-xs-12 col-sm-12 col-md-12 py-2">
-                                <h2 class="text-left">¿QUIÉNES SOMOS?</h2>
+                    <div class="col-12 col-xs-12 col-sm-12 col-md-7">
+                        <div class="row justify-content-center">
+                            <div class="col-10 col-xs-8 col-sm-10 col-md-10 py-2">
+                                <h2 class="text-left">¿Quiénes somos?</h2>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col-12 col-xs-12 col-sm-12 col-md-12">
-                                <p class="text-justify">CDT es una firma de consultoría y administración de los procesos comerciales de distribución y ventas, enfocada en inteligencia de negocios y administración de información comercial. </p>
-                                <p class="text-justify">La empresa es compuesta por profesionales de muy alta experiencia en ventas, distribución, administración de información y tecnología relacionada al área comercial. Ésta tiene como propósito convertirse en un socio comercial
-                                    de sus clientes por medio del desarrollo de ventajas competitivas que los diferencien ante su competencia. </p>
-                                <p class="text-justify">El objetivo principal de CDT es establecer controles a sus clientes por medio del desarrollo de herramientas tecnológicas de clase mundial que proveen información precisa y actualizada para la toma de decisiones, acciones
+                        <div class="row justify-content-center">
+                            <div class="col-10 col-xs-8 col-sm-10 col-md-10">
+                                <p class="text-justify">CDT Big Data & Business Intelligence es una firma de consultoría
+                                    y administración de los procesos comerciales de distribución y ventas, enfocado en
+                                    inteligencia de negocios y administración de información comercial.
+                                </p>
+                                <p class="text-justify">El objetivo principal de CDT es establecer controles a sus
+                                    clientes por medio del desarrollo de herramientas tecnológicas que
+                                    proveen información precisa y actualizada para la toma de decisiones, acciones
                                     comerciales y mayor eficiencia y efectividad de su gestión.</p>
-                                <p class="text-justify">Con esto, CDT desarrolla consultorías, planes y estrategias que garanticen el éxito a sus clientes a partir de la definición, seguimiento y optimización de sus procesos e indicadores claves de desempeño (KPI's). </p>
-                                <p class="text-justify">Basada en San José, Costa Rica y a partir de sus inicios en el año 2010, CDT ha sido pionero en esta área y hoy cuenta con vasta experiencia trabajando muy de cerca con renombradas firmas transnacionales a través de Latinoamérica
-                                    y el Caribe.</p>
+                                <p class="text-justify">A partir del año 2010, CDT ha sido pionero en esta área y hoy
+                                    cuenta con vasta experiencia, trabajando muy de cerca con renombradas firmas
+                                    transnacionales y administrando información comercial de más de 300 cadenas comerciales y distribuidores  a
+                                    través de Latinoamérica y el Caribe.</p>
                             </div>
                         </div>
                     </div>
@@ -157,209 +176,400 @@
 
     <section id="own-services">
         <div class="row align-items-center justify-content-center">
-            <div class="col-10 col-xs-10 col-sm-10 col-md-10">
-                <div class="row justify-content-center">
-                    <h3 class="text-center">NUESTROS SERVICIOS</h3>
-                </div>
-            </div>
-        </div>
-        <div class="row justify-content-center mx-5">
-            <div class="col-12 col-xs-12 col-sm-12 col-md-4">
-                <div class="row align-items-center justify-content-center py-5">
+            <div class="col-12 col-xs-12 col-sm-12 col-md-6 p-0">
+                <div class="row align-items-center justify-content-center">
                     <div class="col-12 col-xs-12 col-sm-12 col-md-12">
                         <img class="w-100" src="./images/wait.gif" data-src="./images/index-bi.jpg" alt="">
                     </div>
                 </div>
-                <div class="row align-items-center justify-content-center py-0">
-                    <div class="col-12 col-xs-12 col-sm-12 col-md-12">
-                        <h3 class="text-center">Business Intelligence</h3>
-                        <p class="text-justify">Procesamos, Analizamos y Estructuramos la información de su empresa
-                        </p>
-                    </div>
-
-                    <div class="row align-items-center justify-content-center py-0">
-                        <div class="col-12 col-xs-12 col-sm-12 col-md-12">
-                            <a href="./Pages/BI.html" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Ver más información</a>
+            </div>
+            <div class="col-12 col-xs-12 col-sm-12 col-md-6 p-0">
+                <div class="row justify-content-center">
+                    <div class="col-12 col-xs-12 col-sm-12 col-md-12 py-5">
+                        <div class="row justify-content-center">
+                            <h3 class="text-center h3_big_size">Business Intelligence</h3>
+                        </div>
+                        <div class="row align-items-center justify-content-center">
+                            <div class="col-8 col-xs-8 col-sm-8 col-md-8">
+                                <div class="row justify-content-center">
+                                    <p class="text-center p_big_size">Procesamiento, análisis y estructuración de la información comercial de su empresa
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row align-items-center justify-content-center">
+                            <a href="./Pages/BI.html" class="btn btn-secondary btn-lg active" role="button"
+                                aria-pressed="true">Ver más información</a>
                         </div>
                     </div>
-
                 </div>
             </div>
-            <div class="col-12 col-xs-12 col-sm-12 col-md-4">
-                <div class="row align-items-center justify-content-center py-5">
+        </div>
+        <div class="row align-items-center justify-content-center bg_blue">
+            <div class="col-12 col-xs-12 col-sm-12 col-md-6 p-0 order-2 order-md-1">
+                <div class="row justify-content-center">
+                    <div class="col-12 col-xs-12 col-sm-12 col-md-12 py-5">
+                        <div class="row justify-content-center">
+                            <h3 class="text-center h3_blue h3_big_size">POS Manager</h1>
+                        </div>
+                        <div class="row align-items-center justify-content-center">
+                            <div class="col-8 col-xs-8 col-sm-8 col-md-8">
+                                <div class="row justify-content-center">
+                                    <p class="text-center p_blue p_big_size">Sistema para la administración, control y monitoreo de sus marcas y productos en los puntos de venta</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row align-items-center justify-content-center">
+                            <a href="./Pages/POS.html" class="btn btn-secondary btn-lg active" role="button"
+                                aria-pressed="true">Ver más información</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-xs-12 col-sm-12 col-md-6 p-0 order-1 order-md-2">
+                <div class="row align-items-center justify-content-center">
                     <div class="col-12 col-xs-12 col-sm-12 col-md-12">
                         <img class="w-100" src="./images/wait.gif" data-src="./images/index-pos.jpg" alt="">
                     </div>
                 </div>
-                <div class="row align-items-center justify-content-center py-0">
-                    <div class="col-12 col-xs-12 col-sm-12 col-md-12">
-                        <h3 class="text-center">POS Manager</h1>
-                            <p class="text-justify">Nuestras plataformas le facilita el proceso en Puntos de Venta y distribución</p>
-                    </div>
-
-                    <div class="row align-items-center justify-content-center py-0">
-                        <div class="col-12 col-xs-12 col-sm-12 col-md-12">
-                            <a href="./Pages/POS.html" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Ver más información</a>
-                        </div>
-                    </div>
-
-                </div>
             </div>
-            <div class="col-12 col-xs-12 col-sm-12 col-md-4">
-                <div class="row align-items-center justify-content-center py-5">
+        </div>
+        <div class="row align-items-center justify-content-center">
+            <div class="col-12 col-xs-12 col-sm-12 col-md-6 p-0">
+                <div class="row align-items-center justify-content-center">
                     <div class="col-12 col-xs-12 col-sm-12 col-md-12">
                         <img class="w-100" src="./images/wait.gif" data-src="./images/index-gis.jpg" alt="">
                     </div>
                 </div>
-                <div class="row align-items-center justify-content-center py-0">
-                    <div class="col-12 col-xs-12 col-sm-12 col-md-12">
-                        <h3 class="text-center">Geographic Information Systems</h1>
-                            <p class="text-justify">Investigaciones de Mercado y Censos Comerciales</p>
-                    </div>
-
-                    <div class="row align-items-center justify-content-center py-0">
-                        <div class="col-12 col-xs-12 col-sm-12 col-md-12">
-                            <a href="./Pages/GIS.html" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Ver más información</a>
+            </div>
+            <div class="col-12 col-xs-12 col-sm-12 col-md-6 p-0">
+                <div class="row justify-content-center">
+                    <div class="col-12 col-xs-12 col-sm-12 col-md-12 py-5">
+                        <div class="row justify-content-center">
+                            <h3 class="text-center h3_big_size">Geographic Information Systems</h1>
+                        </div>
+                        <div class="row align-items-center justify-content-center">
+                            <div class="col-8 col-xs-8 col-sm-8 col-md-8">
+                                <div class="row justify-content-center">
+                                    <p class="text-center p_big_size">Investigación de mercado, censos comerciales y mapas digitales
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row align-items-center justify-content-center">
+                            <a href="./Pages/GIS.html" class="btn btn-secondary btn-lg active" role="button"
+                                aria-pressed="true">Ver más información</a>
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>
     </section>
 
-    <div id="clients" class="py-5 lazy-4">
+    <div id="clients" class="py-5">
         <div class="row justify-content-center">
             <div class="col-10 col-xs-10 col-sm-10 col-md-10">
-                <div class="py-5 row justify-content-left">
-                    <h3>MARCAS Y EMPRESAS QUE HAN CONFIADO EN NUESTROS SERVICIOS</h3>
+                <div class="py-5 row justify-content-center">
+                    <h3 class="text-center">MARCAS Y EMPRESAS QUE HAN CONFIADO EN NUESTROS SERVICIOS</h3>
                 </div>
             </div>
         </div>
         <div class="row justify-content-center">
             <div class="col-10 col-xs-10 col-sm-10 col-md-10">
-                <div class="row justify-content-center align-items-center">
-                    <div class="col-6 col-xs-6 col-sm-6 col-md-3">
-                        <img class="w-100" src="./images/wait.gif" data-src="./images/britt_icon.png" alt="">
-                    </div>
-                    <div class="col-6 col-xs-6 col-sm-6 col-md-3">
-                        <img class="w-100" src="./images/wait.gif" data-src="./images/Kimberly_icon.png" alt="">
-                    </div>
-                    <div class="col-6 col-xs-6 col-sm-6 col-md-3">
-                        <img class="w-100" src="./images/wait.gif" data-src="./images/nestle_icon.png" alt="">
-                    </div>
-                    <div class="col-6 col-xs-6 col-sm-6 col-md-3">
-                        <img class="w-100" src="./images/wait.gif" data-src="./images/astra_icon.png" alt="">
-                    </div>
-                </div>
-            </div>
-            <div class="col-10 col-xs-10 col-sm-10 col-md-10">
-                <div class="row justify-content-center align-items-center">
-                    <div class="col-6 col-xs-6 col-sm-6 col-md-3">
-                        <img class="w-100" src="./images/wait.gif" data-src="./images/purina_icon.png" alt="">
-                    </div>
-                    <div class="col-6 col-xs-6 col-sm-6 col-md-3">
-                        <img class="w-100" src="./images/wait.gif" data-src="./images/johnson_icon.png" alt="">
-                    </div>
-                    <div class="col-6 col-xs-6 col-sm-6 col-md-3">
-                        <img class="w-100" src="./images/wait.gif" data-src="./images/bayer_icon.png" alt="">
-                    </div>
-                    <div class="col-6 col-xs-6 col-sm-6 col-md-3">
-                        <img class="w-100" src="./images/wait.gif" data-src="./images/fifco_icon.png" alt="">
-                    </div>
-                </div>
-            </div>
-            <div class="col-10 col-xs-10 col-sm-10 col-md-10">
-                <div class="row justify-content-center align-items-center">
-                    <div class="col-6 col-xs-6 col-sm-6 col-md-3">
-                        <img class="w-100" src="./images/wait.gif" data-src="./images/disal_icon.png" alt="">
-                    </div>
-                    <div class="col-6 col-xs-6 col-sm-6 col-md-3">
-                        <img class="w-100" src="./images/wait.gif" data-src="./images/jacks_icon.png" alt="">
-                    </div>
-                    <div class="col-6 col-xs-6 col-sm-6 col-md-3">
-                        <img class="w-100" src="./images/wait.gif" data-src="./images/pozuelo_icon.png" alt="">
-                    </div>
+                <div id="carouselExampleInterval" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active" data-interval="2000">
+                            <div class="row justify-content-center align-items-center">
+                                <div class="col-6 col-xs-6 col-sm-6 col-md-3">
+                                    <img class="w-100" src="./images/wait.gif" data-src="./images/britt_icon.png"
+                                        alt="">
+                                </div>
+                                <div class="col-6 col-xs-6 col-sm-6 col-md-3">
+                                    <img class="w-100" src="./images/wait.gif" data-src="./images/Kimberly_icon.png"
+                                        alt="">
+                                </div>
+                                <div class="col-6 col-xs-6 col-sm-6 col-md-3">
+                                    <img class="w-100" src="./images/wait.gif" data-src="./images/nestle_icon.png"
+                                        alt="">
+                                </div>
+                                <div class="col-6 col-xs-6 col-sm-6 col-md-3">
+                                    <img class="w-100" src="./images/wait.gif" data-src="./images/astra_icon.png"
+                                        alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item" data-interval="2000">
+                            <div class="row justify-content-center align-items-center">
+                                <div class="col-6 col-xs-6 col-sm-6 col-md-3">
+                                    <img class="w-100" src="./images/wait.gif" data-src="./images/purina_icon.png"
+                                        alt="">
+                                </div>
+                                <div class="col-6 col-xs-6 col-sm-6 col-md-3">
+                                    <img class="w-100" src="./images/wait.gif" data-src="./images/johnson_icon.png"
+                                        alt="">
+                                </div>
+                                <div class="col-6 col-xs-6 col-sm-6 col-md-3">
+                                    <img class="w-100" src="./images/wait.gif" data-src="./images/bayer_icon.png"
+                                        alt="">
+                                </div>
+                                <div class="col-6 col-xs-6 col-sm-6 col-md-3">
+                                    <img class="w-100" src="./images/wait.gif" data-src="./images/fifco_icon.png"
+                                        alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="row justify-content-center align-items-center">
+                                <div class="col-6 col-xs-6 col-sm-6 col-md-3">
+                                    <img class="w-100" src="./images/wait.gif" data-src="./images/disal_icon.png"
+                                        alt="">
+                                </div>
+                                <div class="col-6 col-xs-6 col-sm-6 col-md-3">
+                                    <img class="w-100" src="./images/wait.gif" data-src="./images/jacks_icon.png"
+                                        alt="">
+                                </div>
+                                <div class="col-6 col-xs-6 col-sm-6 col-md-3">
+                                    <img class="w-100" src="./images/wait.gif" data-src="./images/pozuelo_icon.png"
+                                        alt="">
+                                </div>
 
-                    <div class="col-6 col-xs-6 col-sm-6 col-md-3">
-                        <img class="w-100" src="./images/wait.gif" data-src="./images/roma_icon.png" alt="">
+                                <div class="col-6 col-xs-6 col-sm-6 col-md-3">
+                                    <img class="w-100" src="./images/wait.gif" data-src="./images/roma_icon.png" alt="">
+                                </div>
+                            </div>
+                        </div>
                     </div>
+                    <a class="carousel-control-prev" href="#carouselExampleInterval" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleInterval" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
                 </div>
             </div>
         </div>
+
     </div>
 
-    <div id="partners" class="py-5 lazy-4">
+    <!--<section id="data" class="py-5">
         <div class="row justify-content-center">
             <div class="col-10 col-xs-10 col-sm-10 col-md-10">
-                <div class="py-5 row justify-content-left">
-                    <h3>PARTNERS
-                    </h3>
+                <div class="row align-items-center justify-content-center">
+                    <div class="col-6 col-xs-12 col-sm-6 col-md-2 p-0">
+                        <div class="row align-items-center justify-content-center">
+                            <div class="col-12 col-xs-12 col-sm-12 col-md-12">
+                                <div class="flip-card">
+                                    <div class="flip-card-inner">
+                                        <div class="flip-card-front">
+                                            <div class="row align-items-center justify-content-center h-100">
+                                                <div class="card" style="width: 18rem;">
+                                                    <img class="w-100" src="./images/wait.gif"
+                                                        data-src="./images/icons_data/farmacies.jpg " alt="">
+                                                    <div class="card-body">
+                                                        <h5 class="card-title">+20 cadenas de farmacias</h5>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="flip-card-back">
+                                            <div class="row align-items-center justify-content-center h-100">
+                                                <div class="col-10 col-xs-10 col-sm-10 col-md-10">
+                                                    <h3>Más de 20 cadenas de farmacias administradas en Centroamérica
+                                                    </h3>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-xs-12 col-sm-6 col-md-2 p-0">
+                        <div class="row align-items-center justify-content-center">
+                            <div class="col-12 col-xs-12 col-sm-12 col-md-12">
+                                <div class="flip-card">
+                                    <div class="flip-card-inner">
+                                        <div class="flip-card-front">
+                                            <div class="row align-items-center justify-content-center h-100">
+                                                <div class="card" style="width: 18rem;">
+                                                    <img class="w-100" src="./images/wait.gif"
+                                                        data-src="./images/icons_data/supermarkets.jpg " alt="">
+                                                    <div class="card-body">
+                                                        <h5 class="card-title">+25 cadenas de supermercados</h5>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="flip-card-back">
+                                            <div class="row align-items-center justify-content-center h-100">
+                                                <div class="col-10 col-xs-10 col-sm-10 col-md-10">
+                                                    <h3>Más de 25 cadenas de supermercados administradas en CAM y
+                                                        Suramérica</h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-xs-12 col-sm-6 col-md-2 p-0">
+                        <div class="row align-items-center justify-content-center">
+                            <div class="col-12 col-xs-12 col-sm-12 col-md-12">
+                                <div class="flip-card">
+                                    <div class="flip-card-inner">
+                                        <div class="flip-card-front">
+                                            <div class="row align-items-center justify-content-center h-100">
+                                                <div class="card" style="width: 18rem;">
+                                                    <img class="w-100" src="./images/wait.gif"
+                                                        data-src="./images/icons_data/users.jpg " alt="">
+                                                    <div class="card-body">
+                                                        <h5 class="card-title">+150 usuarios</h5>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="flip-card-back">
+                                            <div class="row align-items-center justify-content-center h-100">
+                                                <div class="col-10 col-xs-10 col-sm-10 col-md-10">
+                                                    <h3>Más de 150 usuarios activos interactuando con nuestras
+                                                        herramientas</h3>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-xs-12 col-sm-6 col-md-2 p-0">
+                        <div class="row align-items-center justify-content-center">
+                            <div class="col-12 col-xs-12 col-sm-12 col-md-12">
+                                <div class="flip-card">
+                                    <div class="flip-card-inner">
+                                        <div class="flip-card-front">
+                                            <div class="row align-items-center justify-content-center h-100">
+                                                <div class="card align-items-center" style="width: 18rem;">
+                                                    <img class="w-100" src="./images/wait.gif"
+                                                        data-src="./images/icons_data/distributors.jpg" alt="">
+                                                    <div class="card-body">
+                                                        <h5 class="card-title">+300 distribuidores</h5>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="flip-card-back">
+                                            <div class="row align-items-center justify-content-center h-100">
+                                                <div class="col-10 col-xs-10 col-sm-10 col-md-10">
+                                                    <h3>Más de 300 distribuidores activos en Centroamérica y Caribe</h3>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-xs-12 col-sm-6 col-md-2 p-0">
+                        <div class="row align-items-center justify-content-center">
+                            <div class="col-12 col-xs-12 col-sm-12 col-md-12">
+                                <div class="flip-card">
+                                    <div class="flip-card-inner">
+                                        <div class="flip-card-front">
+                                            <div class="row align-items-center justify-content-center h-100">
+                                                <div class="card" style="width: 18rem;">
+                                                    <img class="w-100" src="./images/wait.gif"
+                                                        data-src="./images/icons_data/files.jpg " alt="">
+                                                    <div class="card-body">
+                                                        <h5 class="card-title">+650 archivos</h5>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="flip-card-back">
+                                            <div class="row align-items-center justify-content-center h-100">
+                                                <div class="col-10 col-xs-10 col-sm-10 col-md-10">
+                                                    <h3>Más de 650 archivos procesados diariamente</h3>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-xs-12 col-sm-6 col-md-2 p-0">
+                        <div class="row align-items-center justify-content-center">
+                            <div class="col-12 col-xs-12 col-sm-12 col-md-12">
+                                <div class="flip-card">
+                                    <div class="flip-card-inner">
+                                        <div class="flip-card-front">
+                                            <div class="row align-items-center justify-content-center h-100">
+                                                <div class="card" style="width: 18rem;">
+                                                    <img class="w-100" src="./images/wait.gif"
+                                                        data-src="./images/icons_data/transactions.jpg" alt="">
+                                                    <div class="card-body">
+                                                        <h5 class="card-title">+150,000 transacciones</h5>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="flip-card-back">
+                                            <div class="row align-items-center justify-content-center h-100">
+                                                <div class="col-10 col-xs-10 col-sm-10 col-md-10">
+                                                    <h3>Más de 150,000 transacciónes procesadas diariamente</h3>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
+    </section>-->
 
-        <div class="row justify-content-center">
-            <div class="col-10 col-xs-10 col-sm-10 col-md-10">
-                <div class="row justify-content-center align-items-center">
-                    <div class="col-6 col-xs-6 col-sm-6 col-md-3">
-                        <img class="w-100" src="./images/wait.gif" data-src="./images/powerstreet_icon.png" alt="">
-                    </div>
-                    <div class="col-6 col-xs-6 col-sm-6 col-md-3">
-                        <img class="w-100" src="./images/wait.gif" data-src="./images/itaso_icon.png" alt="">
-                    </div>
-                    <div class="col-6 col-xs-6 col-sm-6 col-md-3">
-                        <img class="w-100" src="./images/wait.gif" data-src="./images/tdm_icon.png" alt="">
-                    </div>
-                    <div class="col-6 col-xs-6 col-sm-6 col-md-3">
-                        <img class="w-100" src="./images/wait.gif" data-src="./images/gosocket_icon.png" alt="">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div id="contact" class="py-5 lazy-4">
+    <div id="contact" class="py-5">
         <div class="row justify-content-center">
             <div class="col-10 col-xs-10 col-sm-11 col-md-10">
-                <div class="row align-items-center justify-content-center">
-                    <div class="col-12 col-xs-12 col-sm-12 col-md-12">
-                        <h3 class="white">CONTÁCTENOS</h3>
-                    </div>
-                </div>
                 <div class="row align-items-center justify-content-center">
                     <div class="col-12 col-xs-12 col-sm-12 col-md-4">
                         <div class="row align-items-center justify-content-center">
                             <div class="col-12 col-xs-12 col-sm-12 col-md-12">
-                                <div class="row">
-                                    <div class="col-12 col-xs-12 col-sm-12 col-md-12">
-                                        <h3 class=" py-0 my-0">INFORMACIÓN</h3>
+                                <div class="row align-items-center justify-content-center">
+                                    <div class="col-8 col-xs-8 col-sm-8 col-md-8">
+                                        <h3 class=" py-0 my-0 text-center ">CONTÁCTENOS</h3>
                                     </div>
                                 </div>
-                                <div class="row">
-                                    <div class="col-12 col-xs-12 col-sm-12 col-md-12">
-                                        <p class=" py-0 my-0">T: (506) 2221-4244</p>
+                                <div class="row  align-items-center justify-content-center">
+                                    <div class="col-8 col-xs-8 col-sm-8 col-md-8">
+                                        <p class=" py-0 my-0 text-center ">T: (506) 2221-4244</p>
                                     </div>
                                 </div>
-                                <div class="row">
-                                    <div class="col-12 col-xs-12 col-sm-12 col-md-12">
-                                        <p class=" py-0 my-0">C: (506) 8386-6952</p>
+                                <div class="row align-items-center justify-content-center">
+                                    <div class="col-8 col-xs-8 col-sm-8 col-md-8">
+                                        <p class=" py-0 my-0 text-center">C: (506) 8386-6952</p>
                                     </div>
                                 </div>
 
-                                <div class="row">
-                                    <div class="col-12 col-xs-12 col-sm-12 col-md-12">
-                                        <p>E: <a href="mailto:enieto@cdt.cr">info@cdt.cr</a></p>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-12 col-xs-12 col-sm-12 col-md-12">
-                                        <p class="text-left">San José, Costa Rica.</p>
-                                    </div>
-                                </div>
-                                <div class="row">
+                                <div class="row align-items-center justify-content-center">
                                     <div class="col-8 col-xs-8 col-sm-8 col-md-8">
-                                        <img class="w-100" src="./images/wait.gif" data-src="./images/logo.png" alt="cdt-logo" />
+                                        <p class="text-center">E: <a href="mailto:enieto@cdt.cr">info@cdtbigdata.com</a></p>
+                                    </div>
+                                </div>
+                                <div class="row align-items-center justify-content-center">
+                                    <div class="col-8 col-xs-8 col-sm-8 col-md-8">
+                                        <img class="w-100" src="./images/wait.gif" data-src="./images/logo.png"
+                                            alt="cdt-logo" />
                                     </div>
                                 </div>
                             </div>
@@ -367,7 +577,8 @@
                     </div>
 
                     <div class="col-12 col-xs-12 col-sm-12 col-md-4">
-                        <iframe class="w-100" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3929.9209191462865!2d-84.07449228526006!3d9.94053787678284!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa0e54f9dd7e6f5%3A0x68c57993761db660!2sCDT+Big+Data+%26+Business+Intelligence!5e0!3m2!1ses-419!2scr!4v1551375197653"
+                        <iframe class="w-100"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3929.9209191462865!2d-84.07449228526006!3d9.94053787678284!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa0e54f9dd7e6f5%3A0x68c57993761db660!2sCDT+Big+Data+%26+Business+Intelligence!5e0!3m2!1ses-419!2scr!4v1551375197653"
                             height="450" tittle="map" frameborder="0" style="border:0" allowfullscreen></iframe>
                     </div>
                 </div>
@@ -378,13 +589,21 @@
 
 
     <!--JAVASCRIPTS bootstrap-->
-    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"
+        integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n"
+        crossorigin="anonymous"></script>
     <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>-->
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
     <script src="Styles/script.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
