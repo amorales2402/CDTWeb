@@ -20,8 +20,6 @@ html {
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#a4cde9', GradientType=1);*/
 }
 
-  
-
 .w-40 {
     width: 40%
 }
@@ -50,6 +48,9 @@ p {
     display: flex;
 }
 
+.btn:hover {background-color: #1b5da9;
+color: white;}
+
 .bg_dark {
     background-color: #2d2d2d !important;
 }
@@ -67,12 +68,12 @@ p {
 .navbar-light {
     background: none;
     position: fixed;
-    z-index: 1000;
+    z-index: 9999;
     width: 100%;
     /*border-bottom: 1px solid #fff;*/
-    -webkit-transition: background 3s ease-in-out, padding 3s ease-in-out, height 3s ease-in-out, color 3s ease-in-out, font-size 3s ease-in-out;
-    -moz-transition: background 3s ease-in-out, padding 3s ease-in-out, height 3s ease-in-out, color 3s ease-in-out, font-size 3s ease-in-out;
-    transition: background 3s ease-in-out, padding 3s ease-in-out, height 3s ease-in-out, color 3s ease-in-out, font-size 3s ease-in-out;
+    -webkit-transition: background 1.5s ease-in-out, padding 1.5s ease-in-out, height 1.5s ease-in-out, color 1.5s ease-in-out, font-size 1.5s ease-in-out;
+    -moz-transition: background 1.5s ease-in-out, padding 1.5s ease-in-out, height 1.5s ease-in-out, color 1.5s ease-in-out, font-size 1.5s ease-in-out;
+    transition: background 1.5s ease-in-out, padding 1.5s ease-in-out, height 1.5s ease-in-out, color 1.5s ease-in-out, font-size 1.5s ease-in-out;
 }
 
 .navbar-light svg {
@@ -217,18 +218,49 @@ p {
     background-color: transparent;
 }
 
+.img_bg1 {
+    position: fixed;
+    margin-top: 0px;
+    left: 0;
+    width: 120% ;
+    transform: skewX(0deg);
+    overflow: hidden;
+    -webkit-transition: transform 1.5s ease-in-out, opacity 1s ease;
+    -moz-transition: transform 1.5s ease-in-out, opacity 1s ease;
+    transition: transform 1.5s ease-in-out,margin 1.5s ease-in-out, opacity 1s ease;
+    }
+
+.move{
+    margin-top: -60px;
+    transform: skewX(20deg);
+    
+    -webkit-transition: transform 1.5s ease-in-out;
+    -moz-transition: transform 1.5s ease-in-out;
+    transition: transform 1.5s ease-in-out,margin 1.5s ease-in-out;
+}
+
+.whitebackground{
+    position:absolute;
+    left: 0;
+    width: 110%;
+    overflow: hidden;
+    }
+
+.worldgif {
+    position: absolute;
+    width: 55%;
+    margin-top: -250px;
+    opacity: 0.1;
+}
+
 .lazy-3 {
-    background-image: url("../images/image_bg1.jpg");
+    /*background-image: url("../images/image_bg1.png");*/
+    background-color: white;
     min-height: 100%;
 }
 
 .lazy-bi1 {
     background-image: url("../images/bi-bg1.jpg");
-    min-height: 100%;
-}
-
-.lazy-pos1 {
-    background-image: url("../images/pos-bg1.jpg");
     min-height: 100%;
 }
 
@@ -263,7 +295,6 @@ p {
 .lazy-3,
 #services,
 #bi-start,
-#pos-start,
 #gis-start {
     background-attachment: fixed;
     background-position: center;
@@ -409,12 +440,12 @@ a {
 
 .carousel-control-prev{
     left:0px;
-    background-color: rgba(74,69,66,.4);
+    background-color:transparent;
     width: 5%;
 }
 .carousel-control-next{
     right:0px;
-    background-color: rgba(74,69,66,.4);
+    background-color: transparent;
     width: 5%;
 }
 .card {
@@ -481,7 +512,7 @@ a {
     }
     .lazy-3 {
         --margin-top: 50px;
-        background-image: url("../images/image_bg1_mob.jpg");
+        /*background-image: url("../images/image_bg1_mob.jpg");*/
         --min-height: 50%;
         background-attachment: inherit;
         background-position: left;
@@ -517,6 +548,14 @@ screen and (max-width:900px) {
     }
 }
 
+.h3_big{
+    font-size: 2.5rem !important;
+}
+
+.h1_big{
+    font-size: 4.5rem !important;
+    font-weight: 600;
+}
 
 @media screen and (max-device-width:667px),
 screen and (max-width:667px) {
@@ -539,6 +578,8 @@ screen and (max-width:667px) {
     .p_big_size {
         font-size: 100%;
     }
+
+    
 }
 
 @keyframes inner_move {
