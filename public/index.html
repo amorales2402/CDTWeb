@@ -4,9 +4,10 @@
 <head>
 
     <!--DECLARA FAVICONS-->
-    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon-16x16.png">
+    <link rel="manifest" href="./images/site.webmanifest">
     <link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
@@ -39,7 +40,8 @@
 
     <!--CSS BOOTSTRAP
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous" media="none" onload="if(media!='all')media='all'">-->
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 
     <link rel="stylesheet" href="Styles/style.css" media="none" onload="if(media!='all')media='all'">
     <meta name=viewport content="width=device-width, initial-scale=1">
@@ -47,42 +49,37 @@
 
 </head>
 
-<body data-spy="scroll" id="hover-scroll" onmousemove="hidescrollbar()" data-target="#navbar-menu-scroll"
-    data-offset="0">
+<body data-spy="scroll" data-target="#navbar-spy" data-offset="0">
     <header class="navbar navbar-expand navbar-light flex-column flex-md-row bd-navbar">
         <!--<a class="navbar-brand" href="/" aria-label="CDT Big Data & Business Intelligence">
             <span class="navbar-toggler-icon"></span>
         </a>-->
-        <div class="navbar-nav-scroll">
+        <div id="navbar-spy" class="navbar-nav-scroll">
             <ul class="navbar-nav bd-navbar-nav flex-row">
                 <li class="nav-item">
-                    <a class="nav-link active" href="/">Inicio</a>
+                    <a id="home" class="nav-link active" onclick="showelements('home')"  href="#"></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="./index.html#about">¿Quiénes somos?</a>
+                    <a id="our_products" onclick="showelements('home')"  class="nav-link" href="#own-services"></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="./index.html#own-services">Productos y Servicios</a>
+                    <a id="our_clients"  onclick="showelements('home')" class="nav-link" href="#clients"></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="./index.html#clients">Clientes</a>
+                    <a id="contact_l"  onclick="showelements('home')" class="nav-link" href="#contact"></a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="./index.html#contact">Contáctenos</a>
-                </li>
-            </ul>
-
+        </ul>
         </div>
         <ul class="navbar-nav ml-md-auto">
             <li class="nav-item dropdown">
-                <a class="nav-item nav-link dropdown-toggle mr-md-2" href="/" data-toggle="dropdown"
+                <a  id="languaje"  class="nav-item nav-link dropdown-toggle mr-md-2" href="/" data-toggle="dropdown"
                     aria-haspopup="true" aria-expanded="false">Language</a>
                 <div class="dropdown-menu dropdown-menu-md-right">
-                    <a class="dropdown-item active" href="./index.html#start">Español</a>
+                    <a href="#" class="dropdown-item active"  onclick="cambiarIdioma('es')">Español</a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="./index-EN.html#start">English</a>
-
+                    <a href="#" class="dropdown-item"  onclick="cambiarIdioma('en')">English</a>
                 </div>
+            </li>
             <li class="nav-item">
                 <a class="nav-link p-1 m-0" href="https://www.facebook.com/cdtcr/" target="_blank" rel="noopener"
                     aria-label="Twitter">
@@ -125,407 +122,429 @@
             </li>
         </ul>
     </header>
-    <section id="start-bg" class="lazy-3">
-        <div class="container-fluid">
+    <section id="home_section" class="">
+        <section id="start-bg" class="target_option">
+            <img id="img_bg_1" class="img_bg1" src="./images/image_bg1.png" alt="">
+            <div class="container-fluid vh-100">
+                <div class="row align-items-center justify-content-left vh-100">
+                    <div class="col-12 col-xs-12 col-sm-12 col-md-3">
+                        <img src="./images/logo.png" class="w-100" alt="">
+                    </div>
+                    <div class="col-10 col-xs-10 col-sm-10 col-md-6 ">
+                        <h3 id="welcome_message_h3_1" class="gray h3_big"></h3>
+                        <h1 class="gray h1_big">Big Data & Business Intelligence</h1>
+                        <h3 id="welcome_message_h3_2" class="gray h3_big"></h3>
+                        <div class="row align-items-center justify-content-left pl-3">
+                            <button onclick="scrollToSection('contact')"  id="more_information" class="btn border-primary btn-lg active" role="button" aria-pressed="true"></button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>        
+        </section>
+        <section id="own-services" class=" py-5 target_option">
+            <div class="row align-items-center justify-content-center">
+                <div class="col-12 col-xs-12 col-sm-12 col-md-4 p-0">
+                    <div class="row align-items-center justify-content-center">
+                        <div class="col-12 col-xs-12 col-sm-12 col-md-10">
+                            <h3  id="services_h3" class="gray h3_big"></h3>
+                            <div class="row align-items-center justify-content-left pl-3">
+                                <button id="im_interested" onclick="scrollToSection('contact')" class="btn btn-lg active border-primary" role="button"
+                                    aria-pressed="true"></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-xs-12 col-sm-12 col-md-7 p-0">
+                    <div class="row align-items-top justify-content-center border-bottom pb-5">
+                        <div class="col-12 col-xs-12 col-sm-12 col-md-5 border-right">
+                            <h3>Business Intelligence</h3>
+                            <h4 id="bi_text" class="gray py-1"></h3>
+                            <h4 id="bi_text_tc" class="gray py-1"></h3>
+                            <h4 id="bi_text_mc" class="gray py-1"></h3>  
+                            <div class="row align-items-center justify-content-center py-3">
+                                <div class="col-12 col-xs-12 col-sm-12 col-md-6">
+                                    <img src="./images/BusinessIntelligence.png" width="100%" alt="">
+                                </div>
+                            </div>
+                            <div class="row align-items-center justify-content-center pt-5">
+                                <button id="read_more1" data-toggle="collapse" data-target="#multiCollapse1" aria-expanded="false" aria-controls="multiCollapse1" class="btn border-primary btn-lg active" role="button"aria-pressed="true">Leer más</button>
+                            </div>
+                            <div class="row align-items-center justify-content-center collapse multi-collapse   p-5" id="multiCollapse1">
+                                <div class="col-12 col-xs-12 col-sm-12 col-md-12">
+                                    <div class="row align-items-center justify-content-center border-bottom">
+                                            <div class="col-12 col-xs-12 col-sm-12 col-md-5">
+                                                <div class="row align-items-center justify-content-center">
+                                                    <img src="./images/sell-out_icon.png" width="100%" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-xs-12 col-sm-12 col-md-7">
+                                                <div class="row">
+                                                    <p id="bi_text_sos"></p>
+                                                </div>
+                                            </div>
+                                    </div>
+                                    <div class="row align-items-center justify-content-center border-bottom border-top">
+                                        <div class="col-12 col-xs-12 col-sm-12 col-md-5">
+                                            <div class="row align-items-center justify-content-center">
+                                                <img src="./images/scan-data_icon.png" width="100%" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-xs-12 col-sm-12 col-md-7">
+                                            <div class="row">
+                                                <p id="bi_text_sdm"></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row align-items-center justify-content-center border-top border-bottom">
+                                        <div class="col-12 col-xs-12 col-sm-12 col-md-5">
+                                            <div class="row align-items-center justify-content-center">
+                                                <img src="./images/sell-in_icon.png" width="100%" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-xs-12 col-sm-12 col-md-7">
+                                            <div class="row">
+                                                <p id="bi_text_sim"></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row align-items-center justify-content-center border-top">
+                                        <div class="col-12 col-xs-12 col-sm-12 col-md-5">
+                                            <div class="row align-items-center justify-content-center">
+                                                <img src="./images/kapis_icon.png" width="100%" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-xs-12 col-sm-12 col-md-7">
+                                            <div class="row">
+                                                <p id="bi_text_kapis"></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-xs-12 col-sm-12 col-md-5 border-left">
+                            <h3>POS Manager</h3>
+                            <h4 id="pos_text" class="gray py-1"></h3>
+                            <div class="row align-items-center justify-content-center py-3">
+                                <div class="col-12 col-xs-12 col-sm-12 col-md-6">
+                                    <img src="./images/pos_icon.png" width="100%" alt="">
+                                </div>
+                            </div>
+                            <div class="row align-items-center justify-content-center">
+                                <div class="col-12 col-xs-12 col-sm-12 col-md-4">
+                                    <img src="./images/posapp_icon.png" width="100%" alt="">
+                                </div>
+                                <div class="col-12 col-xs-12 col-sm-12 col-md-4">
+                                    <img src="./images/posweb_icon.png" width="100%" alt="">
+                                </div>
+                            </div>
+                            <div class="row align-items-center justify-content-center pt-5">
+                                <button id="read_more2" onclick="showelements('pos_section')" class="btn border-primary btn-lg active" role="button" aria-pressed="true">Leer más</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row align-items-top justify-content-center py-5 border-top">
+                        <div class="col-12 col-xs-12 col-sm-12 col-md-5 border-right">
+                            <h3>Operations Control System</h3>
+                            <h4 id="line_text" class="gray py-1">Control y medición de toda actividad realizada en cualquier tipo de planta de producción.</h3>
+                            <div class="row align-items-center justify-content-center py-3">
+                                <div class="col-12 col-xs-12 col-sm-12 col-md-6">
+                                    <img src="./images/line_icon.png" width="100%" alt="">
+                                </div>
+                            </div>
+                            <div class="row align-items-center justify-content-center pt-5">
+                                <div class="row align-items-center justify-content-center pt-5">
+                                    <button id="read_more3" data-toggle="collapse" data-target="#multiCollapse2" aria-expanded="false" aria-controls="multiCollapse1" class="btn border-primary btn-lg active" role="button"aria-pressed="true">Leer más</button>
+                                </div>
+                                <div class="row align-items-center justify-content-center collapse multi-collapse p-5" id="multiCollapse2">
+                                    <div class="col-12 col-xs-12 col-sm-12 col-md-12">
+                                        <div class="row align-items-center justify-content-center border-bottom">
+                                                <div class="col-12 col-xs-12 col-sm-12 col-md-4">
+                                                    <div class="row align-items-center justify-content-center">
+                                                        <div class="col-12 col-xs-12 col-sm-12 col-md-5">
+                                                            <div class="row align-items-center justify-content-center">
+                                                                <img src="./images/icons_line/time_icon.png" width="100%" alt="">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-xs-12 col-sm-12 col-md-8">
+                                                    <div class="row">
+                                                        <h3 id="line_tittle_2" class="py-0 my-0 text-center"></h3>
+                                                        <p  id="line_text_2_1" class="py-0 my-0 text-left"></p>
+                                                        <p  id="line_text_2_2" class="py-0 my-0 text-left"></p>
+                                                        <p  id="line_text_2_3" class="py-0 my-0 text-left"></p>
+                                                    </div>
+                                                </div>
+                                        </div>
+                                        <div class="row align-items-center justify-content-center border-bottom border-top">
+                                            <div class="col-12 col-xs-12 col-sm-12 col-md-4">
+                                                <div class="row align-items-center justify-content-center">
+                                                    <div class="col-12 col-xs-12 col-sm-12 col-md-5">
+                                                        <div class="row align-items-center justify-content-center">
+                                                            <img src="./images/icons_line/glass_icon.png" width="100%" alt="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-xs-12 col-sm-12 col-md-8">
+                                                <div class="row">
+                                                    <h3 id="line_tittle_3" class="py-0 my-0 text-center"></h3>
+                                                    <p  id="line_text_3_1" class="py-0 my-0 text-left"></p>
+                                                    <p  id="line_text_3_2" class="py-0 my-0 text-left"></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row align-items-center justify-content-center border-top border-bottom">
+                                            <div class="col-12 col-xs-12 col-sm-12 col-md-4">
+                                                <div class="row align-items-center justify-content-center">
+                                                    <div class="col-12 col-xs-12 col-sm-12 col-md-5">
+                                                        <div class="row align-items-center justify-content-center">
+                                                            <img src="./images/icons_line/goal_icon.png" width="100%" alt="">
+                                                        </div>
+                                                    </div> 
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-xs-12 col-sm-12 col-md-8">
+                                                <div class="row">
+                                                    <h3 id="line_tittle_4" class="py-0 my-0 text-center"></h3>
+                                                    <p  id="line_text_4_1" class="py-0 my-0 text-left"></p>
+                                                    <p  id="line_text_4_2" class="py-0 my-0 text-left"></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-xs-12 col-sm-12 col-md-5 border-left">
+                            <h3>Geographic Information Systems</h3>
+                            <h4 id="gis_text" class="gray py-1">Investigación de mercado, censos comerciales y mapas digitales.</h3>
+                            <div class="row align-items-center justify-content-center py-3">
+                                <div class="col-12 col-xs-12 col-sm-12 col-md-6">
+                                    <img src="./images/gis_icon.png" width="100%" alt="">
+                                </div>
+                            </div>
+                            <div class="row align-items-center justify-content-center">
+                                <div class="col-12 col-xs-12 col-sm-12 col-md-5">
+                                    <img src="./images/giscc_icon.png" width="100%" alt="">
+                                </div>
+                                <div class="col-12 col-xs-12 col-sm-12 col-md-5">
+                                    <img src="./images/gis_mr.png" width="100%" alt="">
+                                </div>
+                            </div>
+                            <div class="row align-items-center justify-content-center pt-5">
+                                <button id="read_more4" onclick="showelements('gis_section')" class="btn border-primary btn-lg active" role="button"
+                                    aria-pressed="true">Leer más</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div id="clients" class="pt-5 target_option">
             <div class="row justify-content-center">
                 <div class="col-10 col-xs-10 col-sm-10 col-md-4">
-
-                </div>
-            </div>
-        </div>
-    </section>
-    <section id="about" class="py-5">
-        <div class="row justify-content-center">
-            <div class="col-12 col-xs-10 col-sm-10 col-md-10">
-
-                <div class="row align-items-center justify-content-center">
-                    <div class=" col-8 col-xs-8 col-sm-8 col-md-5">
-                        <img class="w-100" src="./images/wait.gif" data-src="./images/about_img.png" alt="">
+                    <div class="pt-5 row justify-content-center pb-0 mb-0">
+                        <h3 id="clients_h3" class="text-center">Más de 13 años de experiencia, fortaleciendo la gestión de los datos, para el éxito de grandes corporaciones en América Latina.</h3>
                     </div>
-                    <div class="col-12 col-xs-12 col-sm-12 col-md-7">
-                        <div class="row justify-content-center">
-                            <div class="col-10 col-xs-8 col-sm-10 col-md-10 py-2">
-                                <h2 class="text-left">¿Quiénes somos?</h2>
-                            </div>
-                        </div>
-                        <div class="row justify-content-center">
-                            <div class="col-10 col-xs-8 col-sm-10 col-md-10">
-                                <p class="text-justify">CDT Big Data & Business Intelligence es una firma de consultoría
-                                    y administración de los procesos comerciales de distribución y ventas, enfocado en
-                                    inteligencia de negocios y administración de información comercial.
-                                </p>
-                                <p class="text-justify">El objetivo principal de CDT es establecer controles a sus
-                                    clientes por medio del desarrollo de herramientas tecnológicas que
-                                    proveen información precisa y actualizada para la toma de decisiones, acciones
-                                    comerciales y mayor eficiencia y efectividad de su gestión.</p>
-                                <p class="text-justify">A partir del año 2010, CDT ha sido pionero en esta área y hoy
-                                    cuenta con vasta experiencia, trabajando muy de cerca con renombradas firmas
-                                    transnacionales y administrando información comercial de más de 300 cadenas comerciales y distribuidores  a
-                                    través de Latinoamérica y el Caribe.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <section id="own-services">
-        <div class="row align-items-center justify-content-center">
-            <div class="col-12 col-xs-12 col-sm-12 col-md-6 p-0">
-                <div class="row align-items-center justify-content-center">
-                    <div class="col-12 col-xs-12 col-sm-12 col-md-12">
-                        <img class="w-100" src="./images/wait.gif" data-src="./images/index-bi.jpg" alt="">
+                    <div class="row justify-content-center">
+                        <p id="clients_p" class="text-center">Nuestro equipo altamente especializado le ayudará a administrar y unificar bajo una sola herramienta todos los resultados de los procesos comerciales y logísticos.</p>
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-xs-12 col-sm-12 col-md-6 p-0">
-                <div class="row justify-content-center">
-                    <div class="col-12 col-xs-12 col-sm-12 col-md-12 py-5">
-                        <div class="row justify-content-center">
-                            <h3 class="text-center h3_big_size">Business Intelligence</h3>
-                        </div>
-                        <div class="row align-items-center justify-content-center">
-                            <div class="col-8 col-xs-8 col-sm-8 col-md-8">
-                                <div class="row justify-content-center">
-                                    <p class="text-center p_big_size">Procesamiento, análisis y estructuración de la información comercial de su empresa
-                                    </p>
+            <div class="row justify-content-end">
+                <div class="col-10 col-xs-10 col-sm-10 col-md-12">
+                    <div class="py-5 row justify-content-end">
+                            <img class="worldgif " src="./images/WORLD_1.gif" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center pb-5">
+                <div class="col-10 col-xs-10 col-sm-10 col-md-12 pb-5">
+                    <div id="carouselExampleInterval" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="row justify-content-center align-items-center">
+                                <div class="col-12 col-xs-12 col-sm-12 col-md-10 pb-5">
+                                    <div class="carousel-item active" data-interval="5000">
+                                        <div class="row justify-content-around align-items-center">
+                                            <div class="col-6 col-xs-6 col-sm-6 col-md-2">
+                                                <img class="w-100" src="./images/wait.gif" data-src="./images/our_clients/mars.png"
+                                                    alt="">
+                                            </div>
+                                            <div class="col-6 col-xs-6 col-sm-6 col-md-2">
+                                                <img class="w-100" src="./images/wait.gif" data-src="./images/our_clients/kimberly.png"
+                                                    alt="">
+                                            </div>
+                                            <div class="col-6 col-xs-6 col-sm-6 col-md-2">
+                                                <img class="w-100" src="./images/wait.gif" data-src="./images/our_clients/scjohnson.png"
+                                                    alt="">
+                                            </div>
+                                            <div class="col-6 col-xs-6 col-sm-6 col-md-2">
+                                                <img class="w-100" src="./images/wait.gif" data-src="./images/our_clients/astra.png"
+                                                    alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item" data-interval="5000">
+                                        <div class="row justify-content-around align-items-center">
+                                            <div class="col-6 col-xs-6 col-sm-6 col-md-2">
+                                                <img class="w-100" src="./images/wait.gif" data-src="./images/our_clients/bayer.png"
+                                                    alt="">
+                                            </div>
+                                            <div class="col-6 col-xs-6 col-sm-6 col-md-2">
+                                                <img class="w-100" src="./images/wait.gif" data-src="./images/our_clients/nestle.png"
+                                                    alt="">
+                                            </div>
+                                            <div class="col-6 col-xs-6 col-sm-6 col-md-2">
+                                                <img class="w-100" src="./images/wait.gif" data-src="./images/our_clients/purina.png"
+                                                    alt="">
+                                            </div>
+                                            <div class="col-6 col-xs-6 col-sm-6 col-md-2">
+                                                <img class="w-100" src="./images/wait.gif" data-src="./images/our_clients/britt.png"
+                                                    alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item" data-interval="5000">
+                                        <div class="row justify-content-around align-items-center">
+                                            <div class="col-6 col-xs-6 col-sm-6 col-md-2">
+                                                <img class="w-100" src="./images/wait.gif" data-src="./images/our_clients/fifco.png"
+                                                    alt="">
+                                            </div>
+                                            <div class="col-6 col-xs-6 col-sm-6 col-md-2">
+                                                <img class="w-100" src="./images/wait.gif" data-src="./images/our_clients/metalicaimperio.png"
+                                                    alt="">
+                                            </div>
+                                            <div class="col-6 col-xs-6 col-sm-6 col-md-2">
+                                                <img class="w-100" src="./images/wait.gif" data-src="./images/our_clients/mdpharma.png"
+                                                    alt="">
+                                            </div>
+                                        
+                                            <div class="col-6 col-xs-6 col-sm-6 col-md-2">
+                                                <img class="w-100" src="./images/wait.gif" data-src="./images/our_clients/jacks.png"alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item" data-interval="5000">
+                                        <div class="row justify-content-around align-items-center">
+                                            <div class="col-6 col-xs-6 col-sm-6 col-md-2">
+                                                <img class="w-100" src="./images/wait.gif" data-src="./images/our_clients/pozuelo.png"
+                                                    alt="">
+                                            </div>
+                                            <div class="col-6 col-xs-6 col-sm-6 col-md-2">
+                                                <img class="w-100" src="./images/wait.gif" data-src="./images/our_clients/roma.png"
+                                                    alt="">
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="row align-items-center justify-content-center">
-                            <a href="./Pages/BI.html" class="btn btn-secondary btn-lg active" role="button"
-                                aria-pressed="true">Ver más información</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row align-items-center justify-content-center bg_blue">
-            <div class="col-12 col-xs-12 col-sm-12 col-md-6 p-0 order-2 order-md-1">
-                <div class="row justify-content-center">
-                    <div class="col-12 col-xs-12 col-sm-12 col-md-12 py-5">
-                        <div class="row justify-content-center">
-                            <h3 class="text-center h3_blue h3_big_size">POS Manager</h1>
-                        </div>
-                        <div class="row align-items-center justify-content-center">
-                            <div class="col-8 col-xs-8 col-sm-8 col-md-8">
-                                <div class="row justify-content-center">
-                                    <p class="text-center p_blue p_big_size">Sistema para la administración, control y monitoreo de sus marcas y productos en los puntos de venta</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row align-items-center justify-content-center">
-                            <a href="./Pages/POS.html" class="btn btn-secondary btn-lg active" role="button"
-                                aria-pressed="true">Ver más información</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-xs-12 col-sm-12 col-md-6 p-0 order-1 order-md-2">
-                <div class="row align-items-center justify-content-center">
-                    <div class="col-12 col-xs-12 col-sm-12 col-md-12">
-                        <img class="w-100" src="./images/wait.gif" data-src="./images/index-pos.jpg" alt="">
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row align-items-center justify-content-center">
-            <div class="col-12 col-xs-12 col-sm-12 col-md-6 p-0">
-                <div class="row align-items-center justify-content-center">
-                    <div class="col-12 col-xs-12 col-sm-12 col-md-12">
-                        <img class="w-100" src="./images/wait.gif" data-src="./images/index-gis.jpg" alt="">
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-xs-12 col-sm-12 col-md-6 p-0">
-                <div class="row justify-content-center">
-                    <div class="col-12 col-xs-12 col-sm-12 col-md-12 py-5">
-                        <div class="row justify-content-center">
-                            <h3 class="text-center h3_big_size">Geographic Information Systems</h1>
-                        </div>
-                        <div class="row align-items-center justify-content-center">
-                            <div class="col-8 col-xs-8 col-sm-8 col-md-8">
-                                <div class="row justify-content-center">
-                                    <p class="text-center p_big_size">Investigación de mercado, censos comerciales y mapas digitales
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row align-items-center justify-content-center">
-                            <a href="./Pages/GIS.html" class="btn btn-secondary btn-lg active" role="button"
-                                aria-pressed="true">Ver más información</a>
-                        </div>
+                        <a class="carousel-control-prev" href="#carouselExampleInterval" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselExampleInterval" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <div id="clients" class="py-5">
-        <div class="row justify-content-center">
-            <div class="col-10 col-xs-10 col-sm-10 col-md-10">
-                <div class="py-5 row justify-content-center">
-                    <h3 class="text-center">MARCAS Y EMPRESAS QUE HAN CONFIADO EN NUESTROS SERVICIOS</h3>
+<section id="pos_section" class="d-none">
+    <section>
+        <img class="img_bg1" src="./images/image_bg1.png" alt="">
+        <div class="container-fluid vh-100">
+            <div class="row align-items-center justify-content-left vh-100">
+                <div class="col-12 col-xs-12 col-sm-12 col-md-3">
+                    <img src="./images/pos_icon.png" class="w-100" alt="">
                 </div>
-            </div>
-        </div>
-        <div class="row justify-content-center">
-            <div class="col-10 col-xs-10 col-sm-10 col-md-10">
-                <div id="carouselExampleInterval" class="carousel slide" data-ride="carousel">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active" data-interval="2000">
-                            <div class="row justify-content-center align-items-center">
-                                <div class="col-6 col-xs-6 col-sm-6 col-md-3">
-                                    <img class="w-100" src="./images/wait.gif" data-src="./images/britt_icon.png"
-                                        alt="">
-                                </div>
-                                <div class="col-6 col-xs-6 col-sm-6 col-md-3">
-                                    <img class="w-100" src="./images/wait.gif" data-src="./images/Kimberly_icon.png"
-                                        alt="">
-                                </div>
-                                <div class="col-6 col-xs-6 col-sm-6 col-md-3">
-                                    <img class="w-100" src="./images/wait.gif" data-src="./images/nestle_icon.png"
-                                        alt="">
-                                </div>
-                                <div class="col-6 col-xs-6 col-sm-6 col-md-3">
-                                    <img class="w-100" src="./images/wait.gif" data-src="./images/astra_icon.png"
-                                        alt="">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-item" data-interval="2000">
-                            <div class="row justify-content-center align-items-center">
-                                <div class="col-6 col-xs-6 col-sm-6 col-md-3">
-                                    <img class="w-100" src="./images/wait.gif" data-src="./images/purina_icon.png"
-                                        alt="">
-                                </div>
-                                <div class="col-6 col-xs-6 col-sm-6 col-md-3">
-                                    <img class="w-100" src="./images/wait.gif" data-src="./images/johnson_icon.png"
-                                        alt="">
-                                </div>
-                                <div class="col-6 col-xs-6 col-sm-6 col-md-3">
-                                    <img class="w-100" src="./images/wait.gif" data-src="./images/bayer_icon.png"
-                                        alt="">
-                                </div>
-                                <div class="col-6 col-xs-6 col-sm-6 col-md-3">
-                                    <img class="w-100" src="./images/wait.gif" data-src="./images/fifco_icon.png"
-                                        alt="">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="row justify-content-center align-items-center">
-                                <div class="col-6 col-xs-6 col-sm-6 col-md-3">
-                                    <img class="w-100" src="./images/wait.gif" data-src="./images/disal_icon.png"
-                                        alt="">
-                                </div>
-                                <div class="col-6 col-xs-6 col-sm-6 col-md-3">
-                                    <img class="w-100" src="./images/wait.gif" data-src="./images/jacks_icon.png"
-                                        alt="">
-                                </div>
-                                <div class="col-6 col-xs-6 col-sm-6 col-md-3">
-                                    <img class="w-100" src="./images/wait.gif" data-src="./images/pozuelo_icon.png"
-                                        alt="">
-                                </div>
-
-                                <div class="col-6 col-xs-6 col-sm-6 col-md-3">
-                                    <img class="w-100" src="./images/wait.gif" data-src="./images/roma_icon.png" alt="">
-                                </div>
-                            </div>
-                        </div>
+                <div class="col-10 col-xs-10 col-sm-10 col-md-6 ">
+                    <h1 class="gray h1_big">POS Manager</h1>
+                    <h3 id="pos_text_1" class="gray h3_big"></h3>
+                    <div class="row align-items-center justify-content-left pl-3">
+                        <button onclick="scrollToSection('contact')"  id="more_information_2" class="btn border-primary btn-lg active" role="button" aria-pressed="true"></button>
                     </div>
-                    <a class="carousel-control-prev" href="#carouselExampleInterval" role="button" data-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="carousel-control-next" href="#carouselExampleInterval" role="button" data-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Next</span>
-                    </a>
                 </div>
+
             </div>
-        </div>
-
-    </div>
-
-    <!--<section id="data" class="py-5">
-        <div class="row justify-content-center">
+        </div>        
+    </section>
+    <section>
+        <div class="row justify-content-center py-3">
             <div class="col-10 col-xs-10 col-sm-10 col-md-10">
                 <div class="row align-items-center justify-content-center">
-                    <div class="col-6 col-xs-12 col-sm-6 col-md-2 p-0">
+                    <div class=" col-6 col-xs-6 col-sm-6 col-md-6">
                         <div class="row align-items-center justify-content-center">
-                            <div class="col-12 col-xs-12 col-sm-12 col-md-12">
-                                <div class="flip-card">
-                                    <div class="flip-card-inner">
-                                        <div class="flip-card-front">
-                                            <div class="row align-items-center justify-content-center h-100">
-                                                <div class="card" style="width: 18rem;">
-                                                    <img class="w-100" src="./images/wait.gif"
-                                                        data-src="./images/icons_data/farmacies.jpg " alt="">
-                                                    <div class="card-body">
-                                                        <h5 class="card-title">+20 cadenas de farmacias</h5>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="flip-card-back">
-                                            <div class="row align-items-center justify-content-center h-100">
-                                                <div class="col-10 col-xs-10 col-sm-10 col-md-10">
-                                                    <h3>Más de 20 cadenas de farmacias administradas en Centroamérica
-                                                    </h3>
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            <img class="w-50 text-center" src="images/wait.gif" data-src="images/scandata_images/pos-img6.png" alt="">
                         </div>
                     </div>
-                    <div class="col-6 col-xs-12 col-sm-6 col-md-2 p-0">
+                    <div class=" col-6 col-xs-6 col-sm-6 col-md-6">
+                        <h1  id="pos_tittle_2" class="py-0 my-0 text-center"></h1>
+                        <p   id="pos_text_2"   class="py-0 my-0 text-center"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="light_blue">
+        <div class="row justify-content-center py-3">
+            <div class="col-10 col-xs-10 col-sm-10 col-md-10">
+                <div class="row align-items-center">
+                    <div class=" col-6 col-xs-6 col-sm-6 col-md-6">
+                        <h1 id="pos_tittle_3" class="py-0 my-0 text-center"></h1>
+                        <p  id="pos_text_3"   class="py-0 my-0 text-center"></p>
+                    </div>
+                    <div class=" col-6 col-xs-6 col-sm-6 col-md-6">
                         <div class="row align-items-center justify-content-center">
-                            <div class="col-12 col-xs-12 col-sm-12 col-md-12">
-                                <div class="flip-card">
-                                    <div class="flip-card-inner">
-                                        <div class="flip-card-front">
-                                            <div class="row align-items-center justify-content-center h-100">
-                                                <div class="card" style="width: 18rem;">
-                                                    <img class="w-100" src="./images/wait.gif"
-                                                        data-src="./images/icons_data/supermarkets.jpg " alt="">
-                                                    <div class="card-body">
-                                                        <h5 class="card-title">+25 cadenas de supermercados</h5>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="flip-card-back">
-                                            <div class="row align-items-center justify-content-center h-100">
-                                                <div class="col-10 col-xs-10 col-sm-10 col-md-10">
-                                                    <h3>Más de 25 cadenas de supermercados administradas en CAM y
-                                                        Suramérica</h3>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            <img class="w-50 text-center" src="images/wait.gif" data-src="images/scandata_images/pos-img7.png" alt="">
                         </div>
                     </div>
-                    <div class="col-6 col-xs-12 col-sm-6 col-md-2 p-0">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="row justify-content-center py-3">
+            <div class="col-10 col-xs-10 col-sm-10 col-md-10">
+                <div class="row align-items-center justify-content-center">
+                    <div class=" col-6 col-xs-6 col-sm-6 col-md-6">
                         <div class="row align-items-center justify-content-center">
-                            <div class="col-12 col-xs-12 col-sm-12 col-md-12">
-                                <div class="flip-card">
-                                    <div class="flip-card-inner">
-                                        <div class="flip-card-front">
-                                            <div class="row align-items-center justify-content-center h-100">
-                                                <div class="card" style="width: 18rem;">
-                                                    <img class="w-100" src="./images/wait.gif"
-                                                        data-src="./images/icons_data/users.jpg " alt="">
-                                                    <div class="card-body">
-                                                        <h5 class="card-title">+150 usuarios</h5>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="flip-card-back">
-                                            <div class="row align-items-center justify-content-center h-100">
-                                                <div class="col-10 col-xs-10 col-sm-10 col-md-10">
-                                                    <h3>Más de 150 usuarios activos interactuando con nuestras
-                                                        herramientas</h3>
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            <img class="w-50 text-center" src="images/wait.gif" data-src="images/scandata_images/pos-img2.png" alt="">
                         </div>
                     </div>
-                    <div class="col-6 col-xs-12 col-sm-6 col-md-2 p-0">
+                    <div class=" col-6 col-xs-6 col-sm-6 col-md-6">
+                        <h1 id="pos_tittle_4" class="py-0 my-0 text-center"></h1>
+                        <p  id="pos_text_4"   class="py-0 my-0 text-center"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="light_blue">
+        <div class="row justify-content-center py-3">
+            <div class="col-12 col-xs-12 col-sm-12 col-md-10">
+                <div class="row align-items-center justify-content-center">
+                    <div class=" col-6 col-xs-6 col-sm-6 col-md-6">
+                        <h1 id="pos_tittle_5" class="py-0 my-0 text-center"></h1>
+                        <p  id="pos_text_5"   class="py-0 my-0 text-center"></p>
+                    </div>
+                    <div class=" col-6 col-xs-6 col-sm-6 col-md-6">
                         <div class="row align-items-center justify-content-center">
-                            <div class="col-12 col-xs-12 col-sm-12 col-md-12">
-                                <div class="flip-card">
-                                    <div class="flip-card-inner">
-                                        <div class="flip-card-front">
-                                            <div class="row align-items-center justify-content-center h-100">
-                                                <div class="card align-items-center" style="width: 18rem;">
-                                                    <img class="w-100" src="./images/wait.gif"
-                                                        data-src="./images/icons_data/distributors.jpg" alt="">
-                                                    <div class="card-body">
-                                                        <h5 class="card-title">+300 distribuidores</h5>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="flip-card-back">
-                                            <div class="row align-items-center justify-content-center h-100">
-                                                <div class="col-10 col-xs-10 col-sm-10 col-md-10">
-                                                    <h3>Más de 300 distribuidores activos en Centroamérica y Caribe</h3>
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                    </div>
+                            <div class=" col-6 col-xs-6 col-sm-6 col-md-6 p-0 m-0">
+                                <div class="row align-items-center justify-content-center">
+                                    <img class="w-100" src="images/wait.gif" data-src="images/scandata_images/pos-img1.png" alt="">
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="col-6 col-xs-12 col-sm-6 col-md-2 p-0">
-                        <div class="row align-items-center justify-content-center">
-                            <div class="col-12 col-xs-12 col-sm-12 col-md-12">
-                                <div class="flip-card">
-                                    <div class="flip-card-inner">
-                                        <div class="flip-card-front">
-                                            <div class="row align-items-center justify-content-center h-100">
-                                                <div class="card" style="width: 18rem;">
-                                                    <img class="w-100" src="./images/wait.gif"
-                                                        data-src="./images/icons_data/files.jpg " alt="">
-                                                    <div class="card-body">
-                                                        <h5 class="card-title">+650 archivos</h5>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="flip-card-back">
-                                            <div class="row align-items-center justify-content-center h-100">
-                                                <div class="col-10 col-xs-10 col-sm-10 col-md-10">
-                                                    <h3>Más de 650 archivos procesados diariamente</h3>
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-6 col-xs-12 col-sm-6 col-md-2 p-0">
-                        <div class="row align-items-center justify-content-center">
-                            <div class="col-12 col-xs-12 col-sm-12 col-md-12">
-                                <div class="flip-card">
-                                    <div class="flip-card-inner">
-                                        <div class="flip-card-front">
-                                            <div class="row align-items-center justify-content-center h-100">
-                                                <div class="card" style="width: 18rem;">
-                                                    <img class="w-100" src="./images/wait.gif"
-                                                        data-src="./images/icons_data/transactions.jpg" alt="">
-                                                    <div class="card-body">
-                                                        <h5 class="card-title">+150,000 transacciones</h5>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="flip-card-back">
-                                            <div class="row align-items-center justify-content-center h-100">
-                                                <div class="col-10 col-xs-10 col-sm-10 col-md-10">
-                                                    <h3>Más de 150,000 transacciónes procesadas diariamente</h3>
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                    </div>
+                            <div class=" col-6 col-xs-6 col-sm-6 col-md-6 p-0 m-0">
+                                <div class="row align-items-center justify-content-center">
+                                    <img class="w-100" src="images/wait.gif" data-src="images/scandata_images/pos-img8.png" alt="">
                                 </div>
                             </div>
                         </div>
@@ -533,63 +552,199 @@
                 </div>
             </div>
         </div>
-    </section>-->
-
-    <div id="contact" class="py-5">
-        <div class="row justify-content-center">
-            <div class="col-10 col-xs-10 col-sm-11 col-md-10">
-                <div class="row align-items-center justify-content-center">
-                    <div class="col-12 col-xs-12 col-sm-12 col-md-4">
+    </section>
+    <section>
+        <div class="row justify-content-center py-3">
+            <div class="col-12 col-xs-12 col-sm-12 col-md-10">
+                <div class="row align-items-center">
+                    <div class=" col-6 col-xs-6 col-sm-6 col-md-6">
                         <div class="row align-items-center justify-content-center">
-                            <div class="col-12 col-xs-12 col-sm-12 col-md-12">
+                            <div class=" col-6 col-xs-6 col-sm-6 col-md-6 p-0 m-0">
                                 <div class="row align-items-center justify-content-center">
-                                    <div class="col-8 col-xs-8 col-sm-8 col-md-8">
-                                        <h3 class=" py-0 my-0 text-center ">CONTÁCTENOS</h3>
-                                    </div>
+                                    <img class="w-100" src="images/wait.gif" data-src="images/scandata_images/pos-img5.png" alt="">
                                 </div>
-                                <div class="row  align-items-center justify-content-center">
-                                    <div class="col-8 col-xs-8 col-sm-8 col-md-8">
-                                        <p class=" py-0 my-0 text-center ">T: (506) 2221-4244</p>
-                                    </div>
-                                </div>
+                            </div>
+                            <div class=" col-6 col-xs-6 col-sm-6 col-md-6 p-0 m-0">
                                 <div class="row align-items-center justify-content-center">
-                                    <div class="col-8 col-xs-8 col-sm-8 col-md-8">
-                                        <p class=" py-0 my-0 text-center">C: (506) 8386-6952</p>
-                                    </div>
-                                </div>
-
-                                <div class="row align-items-center justify-content-center">
-                                    <div class="col-8 col-xs-8 col-sm-8 col-md-8">
-                                        <p class="text-center">E: <a href="mailto:enieto@cdt.cr">info@cdtbigdata.com</a></p>
-                                    </div>
-                                </div>
-                                <div class="row align-items-center justify-content-center">
-                                    <div class="col-8 col-xs-8 col-sm-8 col-md-8">
-                                        <img class="w-100" src="./images/wait.gif" data-src="./images/logo.png"
-                                            alt="cdt-logo" />
-                                    </div>
+                                    <img class="w-100" src="images/wait.gif" data-src="images/scandata_images/pos-img3.png" alt="">
                                 </div>
                             </div>
                         </div>
                     </div>
-
-                    <div class="col-12 col-xs-12 col-sm-12 col-md-6">
-                        <iframe class="w-100"
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3929.9209191462865!2d-84.07449228526006!3d9.94053787678284!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa0e54f9dd7e6f5%3A0x68c57993761db660!2sCDT+Big+Data+%26+Business+Intelligence!5e0!3m2!1ses-419!2scr!4v1551375197653"
-                            height="450" tittle="map" frameborder="0" style="border:0" allowfullscreen></iframe>
+                    <div class=" col-6 col-xs-6 col-sm-6 col-md-6">
+                        <h1 id="pos_tittle_6" class="py-0 my-0 text-center"></h1>
+                        <p  id="pos_text_6"   class="py-0 my-0 text-center"></p>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="light_blue">
+        <div class="row justify-content-center py-3">
+            <div class="col-10 col-xs-10 col-sm-10 col-md-10">
+                <div class="row align-items-center">
+                    <div class=" col-6 col-xs-6 col-sm-6 col-md-6">
+                        <h1 id="pos_tittle_7" class="py-0 my-0 text-center"></h1>
+                        <p  id="pos_text_7"   class="py-0 my-0 text-center"></p>
+                    </div>
+                    <div class=" col-6 col-xs-6 col-sm-6 col-md-6">
+                        <div class="row align-items-center justify-content-center">
+                            <img class="w-50 text-center" src="images/wait.gif" data-src="images/scandata_images/pos-img4.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</section>
+<section id="gis_section" class="d-none">
+    <section>
+        <img class="img_bg1" src="./images/image_bg1.png" alt="">
+        <div class="container-fluid vh-100">
+            <div class="row align-items-center justify-content-left vh-100">
+                <div class="col-12 col-xs-12 col-sm-12 col-md-3">
+                    <img src="./images/gis_icon.png" class="w-100" alt="">
+                </div>
+                <div class="col-10 col-xs-10 col-sm-10 col-md-6 ">
+                    <h1 class="gray h1_big">Geographic Information Systems</h1>
+                    <h3 id="gis_text_1" class="gray h3_big"></h3>
+                    <div class="row align-items-center justify-content-left pl-3">
+                        <button onclick="scrollToSection('contact')"  id="more_information_3" class="btn border-primary btn-lg active" role="button" aria-pressed="true"></button>
+                    </div>
+                </div>
+            </div>
+        </div>        
+    </section>
+    <section id="commercial-census" class=" pt-5">
+        <div class="row justify-content-center mt-0">
+            <div class="col-10 col-xs-10 col-sm-10 col-md-10">
+                <div class="row align-items-center justify-content-center py-0">
+                    <h1 id="gis_tittle_2"></h1>
+                </div>
+                <div class="row align-items-center justify-content-center py-0">
+                    <p id="gis_text_2"></p>
+                </div>
+                <div class="row align-items-center justify-content-center py-0">
+                    <img class="w-100" src="./images/wait.gif" data-src="./images/gis1.jpg" alt="">
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <section id="investigacion-mercado" class=" pt-5">
+        <div class="row justify-content-center mt-0">
+            <div class="col-10 col-xs-10 col-sm-10 col-md-10">
+                <div class="row align-items-center justify-content-center py-0">
+                    <h1 id="gis_tittle_3"></h1>
+                </div>
+                <div class="row align-items-center justify-content-center py-0">
+                    <p id="gis_text_3"></p>
+                </div>
+                <div class="row align-items-center justify-content-center py-0">
+                    <img class="w-100" src="./images/wait.gif" data-src="./images/gis2.jpg" alt="">
+                </div>
+
+            </div>
+        </div>
+    </section>
+</section>
+<section id="contact" class="target_option">
+    <div class="row justify-content-center">
+        <div class="col-10 col-xs-10 col-sm-11 col-md-11">
+            <div class="row align-items-center justify-content-center">
+                <div class="col-12 col-xs-12 col-sm-12 col-md-5">
+                    <div class="row align-items-center justify-content-left">
+                        <div class="col-12 col-xs-12 col-sm-12 col-md-9">
+                            <h3 id="contact_h3">
+                                La mejor solución para el manejo de distribuidores.Mejore la precisión de sus
+                                reportes y scorecards, detecte tendencias y tome mejores decisiones.
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-xs-12 col-sm-12 col-md-5">
+                    <h3 id="ask_us" class="text-center">Envíenos su consulta</h3>
+                    <form id="form">
+                        <div class="field form-group">
+                            <label id="Your_name" for="from_name">Su nombre</label>
+                            <input type="text"class="form-control"  name="from_name" id="from_name">
+                        </div>
+                        <div class="field form-group">
+                            <label id="your_mail" for="reply_to">Su correo</label>
+                            <input type="email" class="form-control" name="reply_to" id="reply_to"aria-describedby="emailHelp">
+                        </div>
+                        <div class="field form-group">
+                            <label id="your_question" for="message">Su consulta</label>
+                            <textarea type="text" class="form-control" rows="4" name="message" id="message"></textarea>
+                        </div>
+                        <input type="submit" id="send_mail" value="Send Email" class="btn border-primary">
+                    </form>
                 </div>
             </div>
         </div>
     </div>
-
-
+    <div class="row justify-content-center py-5">
+        <div class="col-10 col-xs-10 col-sm-11 col-md-10">
+            <div class="row align-items-center justify-content-center">
+                <div class="col-12 col-xs-12 col-sm-12 col-md-4">
+                    <div class="row align-items-center justify-content-center">
+                        <div class="col-12 col-xs-12 col-sm-12 col-md-12">
+                            <div class="row align-items-center justify-content-center">
+                                <div class="col-8 col-xs-8 col-sm-8 col-md-8">
+                                    <h3 id="contact_l_2" class=" py-0 my-0 text-center "></h3>
+                                </div>
+                            </div>
+                            <div class="row  align-items-center justify-content-center">
+                                <div class="col-8 col-xs-8 col-sm-8 col-md-8">
+                                    <p id="phone" class=" py-0 my-0 text-center "></p>
+                                </div>
+                            </div>
+                            <div class="row align-items-center justify-content-center">
+                                <div class="col-8 col-xs-8 col-sm-8 col-md-8">
+                                    <p class=" py-0 my-0 text-center">C: (506) 8386-6952</p>
+                                </div>
+                            </div>
+                            <div class="row align-items-center justify-content-center">
+                                <div class="col-8 col-xs-8 col-sm-8 col-md-8">
+                                    <p class="text-center">E: <a href="mailto:info@cdt.cr">info@cdtbigdata.com</a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="row align-items-center justify-content-center">
+                                <div class="col-8 col-xs-8 col-sm-8 col-md-8">
+                                    <img class="w-100" src="./images/wait.gif" data-src="./images/logo.png"
+                                        alt="cdt-logo" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-xs-12 col-sm-12 col-md-5">
+                    <iframe class="w-100"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3929.9209191462865!2d-84.07449228526006!3d9.94053787678284!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa0e54f9dd7e6f5%3A0x68c57993761db660!2sCDT+Big+Data+%26+Business+Intelligence!5e0!3m2!1ses-419!2scr!4v1551375197653"
+                        height="450" tittle="map" frameborder="0" style="border:0" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
     <!--JAVASCRIPTS bootstrap-->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>    <script src="Styles/script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+        crossorigin="anonymous"></script>
 
     <script src="Styles/script.js"></script>
+    <script src="js/main.js"></script>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+    <script type="text/javascript">
+        emailjs.init('-wBkaZT0AwccqCJbk')
+    </script>
 
 </body>
 
